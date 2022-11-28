@@ -1,10 +1,19 @@
 import './App.css';
 import LoginForm from "./LoginForm";
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import './Dashboard.js';
 import Dashboard from "./Dashboard";
+import FriendListApp from "./FriendsListApp";
+import {Navigate} from "react-router-dom";
 
 function App() {
+    const [authenticated, setauthenticated] = useState(null);
+    useEffect(() => {
+        const loggedInUser = localStorage.getItem("authenticated");
+        if (loggedInUser) {
+            setauthenticated(loggedInUser);
+        }
+    }, []);
     const [theme, setTheme] = useState({className: 'dark-theme', name:'Dark'})
     let themeName = 'Dark'
     function toggleTheme() {
@@ -25,10 +34,15 @@ function App() {
 
               </div>
               <div id={'mid'}>
+                  if (!authenticated) {
+                  <Navigate replace to="/login" />
+                  } else {
                   <Dashboard />
+              }
               </div>
               <div id={'right'}>
                   <button className={'btn'} onClick={toggleTheme}>{theme.name}</button>
+                  <FriendListApp />
               </div>
           </div>
       </>
