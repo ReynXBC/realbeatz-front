@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Dashboard from "./Dashboard";
 import { useNavigate } from "react-router-dom";
+
+
 const LoginForm = () => {
     const navigate = useNavigate();
     const [username, setusername] = useState("");
@@ -8,7 +10,7 @@ const LoginForm = () => {
     const [authenticated, setauthenticated] = useState(
         localStorage.getItem(localStorage.getItem("authenticated") || false)
     );
-    const users = [{ username: "Jane", password: "testpassword" }];
+    const users = [{ username: "Admin", password: "123456789" }];
     const handleSubmit = (e) => {
         e.preventDefault();
         const account = users.find((user) => user.username === username);
@@ -17,8 +19,9 @@ const LoginForm = () => {
             navigate("/dashboard");
         }
     }
+
     return (
-        <div id={'out'}>
+        <div id={'out'} className={"dark-theme"}>
             <p>Login</p><br/>
             <form onSubmit={handleSubmit}>
                 <input

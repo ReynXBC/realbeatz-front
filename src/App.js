@@ -1,7 +1,8 @@
 import './App.css';
-import LoginForm
-    from "./LoginForm";
-import {useState} from 'react'
+import LoginForm from "./LoginForm";
+import {useState} from 'react';
+import './Dashboard.js';
+import Dashboard from "./Dashboard";
 
 function App() {
     const [theme, setTheme] = useState({className: 'dark-theme', name:'Dark'})
@@ -17,14 +18,14 @@ function App() {
   return (
       <>
           <div id={'top'}>
-              <h1>RealBeats</h1>
+              <h1>RealBeatz</h1>
           </div>
           <div id={'out'} className={theme.className}>
               <div id={'left'}>
 
               </div>
               <div id={'mid'}>
-                  <LoginForm />
+                  <Dashboard />
               </div>
               <div id={'right'}>
                   <button className={'btn'} onClick={toggleTheme}>{theme.name}</button>
