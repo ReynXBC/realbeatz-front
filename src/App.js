@@ -23,30 +23,31 @@ function App() {
             setTheme({className: 'light-theme', name:'Light'})
         }
     }
+    if (!authenticated) {
+        return <Navigate replace to="/login"/>
+    } else {
+        return (
+            <>
+                <div id={'top'}>
+                    <h1>RealBeatz</h1>
+                </div>
+                <div id={'out'} className={theme.className}>
+                    <div id={'left'}>
 
-  return (
-      <>
-          <div id={'top'}>
-              <h1>RealBeatz</h1>
-          </div>
-          <div id={'out'} className={theme.className}>
-              <div id={'left'}>
+                    </div>
+                    <div id={'mid'}>
 
-              </div>
-              <div id={'mid'}>
-                  if (!authenticated) {
-                  <Navigate replace to="/login" />
-                  } else {
-                  <Dashboard />
-              }
-              </div>
-              <div id={'right'}>
-                  <button className={'btn'} onClick={toggleTheme}>{theme.name}</button>
-                  <FriendListApp />
-              </div>
-          </div>
-      </>
-  );
+                    }
+                    </div>
+                    <div id={'right'}>
+                        <button className={'btn'} onClick={toggleTheme}>{theme.name}</button>
+                        <FriendListApp />
+                    </div>
+                </div>
+            </>
+        );
+    }
+
 }
 
 export default App;
