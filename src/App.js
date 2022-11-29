@@ -36,7 +36,7 @@ function App() {
 
                     </div>
                     <div id={'mid'}>
-
+                        <Dashboard />
                     }
                     </div>
                     <div id={'right'}>

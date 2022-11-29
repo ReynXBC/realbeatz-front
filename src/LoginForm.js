@@ -8,15 +8,15 @@ const LoginForm = () => {
     const [username, setusername] = useState("");
     const [password, setpassword] = useState("");
     const [authenticated, setauthenticated] = useState(
-        localStorage.getItem(localStorage.getItem("authenticated") || false)
+        localStorage.getItem(localStorage.getItem("authenticated") || 'false')
     );
     const users = [{ username: "Admin", password: "123456789" }];
     const handleSubmit = (e) => {
         e.preventDefault();
         const account = users.find((user) => user.username === username);
         if (account && account.password === password) {
-            localStorage.setItem("authenticated", true);
-            navigate("/dashboard");
+            localStorage.setItem("authenticated", 'true');
+            navigate("/");
         }
     }
 
