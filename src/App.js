@@ -7,11 +7,11 @@ import FriendListApp from "./FriendsListApp";
 import {Navigate} from "react-router-dom";
 
 function App() {
-    const [authenticated, setauthenticated] = useState(null);
+    const [authenticated, setAuthenticated] = useState({isAuthenticated: false});
     useEffect(() => {
-        const loggedInUser = localStorage.getItem("authenticated");
-        if (loggedInUser) {
-            setauthenticated(loggedInUser);
+        const authenticate = JSON.parse(localStorage.getItem("authenticated"));
+        if (authenticate.isAuthenticated) {
+            setAuthenticated(authenticate);
         }
     }, []);
     const [theme, setTheme] = useState({className: 'dark-theme', name:'Dark'})

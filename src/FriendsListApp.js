@@ -10,9 +10,9 @@ class FriendListApp extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        var name = this.refs.name.value;
-        var age = this.refs.age.value;
-        var friendsTemp = this.state.friends;
+        let name = this.refs.name.value;
+        let age = this.refs.age.value;
+        let friendsTemp = this.state.friends;
 
         fetch(API_BASE, {
             method: "POST",

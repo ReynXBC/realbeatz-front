@@ -1,21 +1,17 @@
 import { useState } from "react";
-import Dashboard from "./Dashboard";
 import { useNavigate } from "react-router-dom";
 
 
 const LoginForm = () => {
     const navigate = useNavigate();
-    const [username, setusername] = useState("");
-    const [password, setpassword] = useState("");
-    const [authenticated, setauthenticated] = useState(
-        localStorage.getItem(localStorage.getItem("authenticated") || 'false')
-    );
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
     const users = [{ username: "Admin", password: "123456789" }];
     const handleSubmit = (e) => {
         e.preventDefault();
         const account = users.find((user) => user.username === username);
         if (account && account.password === password) {
-            localStorage.setItem("authenticated", 'true');
+            localStorage.setItem("authenticated", JSON.stringify({isAuthenticated: true}));
             navigate("/");
         }
     }
@@ -28,12 +24,12 @@ const LoginForm = () => {
                     type="text"
                     name="Username"
                     value={username}
-                    onChange={(e) => setusername(e.target.value)}
+                    onChange={(e) => setUsername(e.target.value)}
                 /><br/>
                 <input
                     type="password"
                     name="Password"
-                    onChange={(e) => setpassword(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value)}
                 />
                 <input type="submit" value="Login" />
             </form>
