@@ -50,22 +50,22 @@ function App() {
       <>
         <div id={'top'}>
           <h1>RealBeatz</h1>
-          {
-            friendsList.map(friend => {
-              console.log(friend);
-              return (
-                <div key={friend.username}>
-                  <span>Username: {friend.username}</span>
-                  <span>First Name: {friend.firstName}</span>
-                  <span>Last Name: {friend.lastName}</span>
-                </div>
-              )
-            })
-          }
+
         </div>
         <div id={'out'} className={theme.className}>
           <div id={'left'}>
-
+            {
+              friendsList.map(friend => {
+                console.log(friend);
+                return (
+                  <div key={friend.username}>
+                    <span>Username: {friend.username}</span>
+                    <span>First Name: {friend.firstName}</span>
+                    <span>Last Name: {friend.lastName}</span>
+                  </div>
+                )
+              })
+            }
           </div>
           <div id={'mid'}>
             <Dashboard/>
