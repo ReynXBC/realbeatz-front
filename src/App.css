@@ -49,20 +49,20 @@ li {
     float: right;
     width: 5%;
     border: 3px solid var(--fontColor);
-    padding: 10%;
+    padding: 5%;
 }
 
 #left {
     float: left;
     width: 5%;
     border: 3px solid var(--fontColor);
-    padding: 10%;
+    padding: 5%;
 }
 
 #mid {
     width: 85%;
     border: 3px solid var(--fontColor);
-    padding: 10%;
+    padding: 5%;
 }
 
 #out {
