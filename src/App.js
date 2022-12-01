@@ -3,9 +3,8 @@ import LoginForm from "./LoginForm";
 import {useEffect, useState} from 'react';
 import './Dashboard.js';
 import Dashboard from "./Dashboard";
-import FriendListApp from "./FriendsListApp";
+import FriendList from "./FriendsList";
 import {Navigate} from "react-router-dom";
-import loginForm from "./LoginForm";
 
 
 function App() {
@@ -16,16 +15,7 @@ function App() {
       setAuthenticated(authenticate);
     }
 
-    // fetch data from server
-    if (!friendsList.length) {
-      fetch("http://localhost:8080/api/test/friends")
-        .then(response => response.json())
-        .then(data => {
-          console.log("fetching data...")
-          setFriendsList(data);
-        })
-        .catch(error => console.log(error));
-    }
+
   }, []);
   const [theme, setTheme] = useState({className: 'dark-theme', name: 'Dark'})
   let themeName = 'Dark'
@@ -38,9 +28,9 @@ function App() {
     }
   }
 
-  let [friendsList, setFriendsList] = useState([]);
-
-
+  function logout() {
+    //insert logout code here
+  }
 
 
   if (!authenticated) {
@@ -48,32 +38,28 @@ function App() {
   } else {
     return (
       <>
-        <div id={'top'}>
-          <h1>RealBeatz</h1>
+        <div id={'top'} className={theme.className}>
+          <div id={'tleft'}>
+            <h1>RealBeatz</h1>
+          </div>
+          <div id={'tmid'}>
 
+          </div>
+          <div id={'tright'}>
+            <button className={'btn'} onClick={toggleTheme}>{theme.name}</button>
+            <button className={'btn'} onClick={logout}>Logout</button>
+          </div>
         </div>
         <div id={'out'} className={theme.className}>
           <div id={'left'}>
-            {
-              friendsList.map(friend => {
-                console.log(friend);
-                return (
-                  <div key={friend.username}>
-                    <span>Username: {friend.username}</span>
-                    <span>First Name: {friend.firstName}</span>
-                    <span>Last Name: {friend.lastName}</span>
-                  </div>
-                )
-              })
-            }
+
           </div>
           <div id={'mid'}>
             <Dashboard/>
-            }
           </div>
           <div id={'right'}>
-            <button className={'btn'} onClick={toggleTheme}>{theme.name}</button>
-            <FriendListApp/>
+
+            <FriendList/>
           </div>
         </div>
       </>
