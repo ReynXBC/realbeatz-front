@@ -1,0 +1,65 @@
+.postContainer {
+    border: black solid thin;
+    padding: 5px;
+    max-width: 50%;
+}
+
+.postHeaderDiv {
+    border: blue solid thin;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.postContentDiv {
+    border: blue solid thin;
+
+}
+
+.postContentDiv p {
+    min-height: 100px;
+    min-width: 70%;
+    padding: 10px;
+}
+
+.postProfileDiv span {
+    position: absolute;
+    top: 15px;
+    margin-left: 10px;
+}
+
+.postProfileDiv img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.postFooterDiv {
+    border: blue solid thin;
+    display: flex;
+}
+
+
+.postCommentInputDiv form {
+    display: inline;
+    margin-left: 100px;
+    /*vertical-align: center;*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(50%, 50%);*/
+}
+
+.postCommentInputDiv {
+    position: relative;
+}
+
+.postCommentInputDiv input[type="text"] {
+    width: 70%;
+
+}
+
+.postLikeDiv {
+    display: flex;
+    vertical-align: center;
+    padding: 10px 0 10px 0;
+}
