@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import FriendCard from "./FriendCard";
 
 
 function FriendList() {
@@ -19,19 +20,15 @@ function FriendList() {
     }, []);
 
     return (
-        <>
+        <div id={'friendListDiv'}>
             {
                 friendsList.map(friend => {
                     console.log(friend);
                     return (
-                        <div key={friend.username}>
-                            <span>Username: {friend.username}</span>
-                            <span>First Name: {friend.firstName}</span>
-                            <span>Last Name: {friend.lastName}</span>
-                        </div>
+                        <FriendCard friend={friend} />
                     )
                 })
-            }</>
+            }</div>
     );
 }
 

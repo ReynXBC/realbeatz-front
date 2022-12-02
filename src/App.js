@@ -1,10 +1,11 @@
 import './App.css';
-import LoginForm from "./LoginForm";
+import LoginForm from "./components/LoginForm";
 import {useEffect, useState} from 'react';
-import './Dashboard.js';
-import Dashboard from "./Dashboard";
-import FriendList from "./FriendsList";
+import './components/Dashboard.js';
+import Dashboard from "./components/Dashboard";
+import FriendList from "./components/FriendsList";
 import {Navigate} from "react-router-dom";
+import "./css/Post.css";
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
     return <Navigate replace to="/login"/>
   } else {
     return (
-      <>
+      <div id={"container"}>
         <div id={'top'} className={theme.className}>
           <div id={'tleft'}>
             <h1>RealBeatz</h1>
@@ -62,7 +63,7 @@ function App() {
             <FriendList/>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 

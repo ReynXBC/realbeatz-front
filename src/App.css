@@ -6,10 +6,19 @@
     --black: #000000;
 }
 
+#container {
+    min-height: 100vh;
+}
+
 #out {
     background: var(--bg);
     color: var(--fontColor);
     font-family: helvetica;
+
+    /*font styling*/
+    margin: auto;
+    border: 3px solid var(--fontColor);
+    display: flex;
 }
 
 .btn {
@@ -47,28 +56,21 @@ li {
 
 #right {
     float: right;
-    width: 5%;
+    width: 15%;
     border: 3px solid var(--fontColor);
-    padding: 5%;
 }
 
 #left {
     float: left;
-    width: 5%;
+    width: 15%;
     border: 3px solid var(--fontColor);
-    padding: 5%;
+
 }
 
 #mid {
     width: 85%;
     border: 3px solid var(--fontColor);
-    padding: 5%;
-}
-
-#out {
-    margin: auto;
-    border: 3px solid var(--fontColor);
-    display: flex;
+    height: 92vh;
 }
 
 #top {
@@ -78,22 +80,50 @@ li {
     margin: auto;
     border: 3px solid var(--fontColor);
     display: flex;
-    position: relative
+    position: relative;
+    height: 8vh;
 }
 
 #tleft {
     float: left;
-    width: 10%;
+    width: 15%;
     border: 3px solid var(--fontColor);
 }
 #tmid {
-    width: 80%;
+    width: 85%;
     border: 3px solid var(--fontColor);
 }
 
 #tright {
     float: right;
-    width: 10%;
+    width: 15%;
     border: 3px solid var(--fontColor);
     position: relative;
+}
+
+.friendCard {
+    border: 1px solid var(--white);
+    padding: 3px;
+    display: flex;
+    gap: 15px;
+}
+
+.friendCard img {
+    width: 50px;
+    border-radius: 50%;
+    border: pink solid thick;
+}
+
+.friendCardDetailsDiv {
+
+}
+
+#friendListDiv {
+    height: 100%;
+    width: 100%;
+
+}
+
+#friendListDiv span {
+
 }
