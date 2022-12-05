@@ -6,6 +6,7 @@ import Dashboard from "./components/Dashboard";
 import FriendList from "./components/FriendsList";
 import {Navigate} from "react-router-dom";
 import "./css/Post.css";
+import Navbar from "./components/Navbar"
 
 
 function App() {
@@ -53,7 +54,7 @@ function App() {
         </div>
         <div id={'out'} className={theme.className}>
           <div id={'left'}>
-
+            <Navbar/>
           </div>
           <div id={'mid'}>
             <Dashboard/>
