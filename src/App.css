@@ -4,6 +4,7 @@
     --white: #FFFFFF;
     --darkbg: #363638;
     --black: #000000;
+    --middark: #6c6c7e;
 }
 
 #container {
@@ -45,6 +46,7 @@ li {
     --fontColor: var(--black);
     --btnBg: var(--buttonback);
     --btnFontColor: var(--black);
+    --postMidbg: var(--middark);
 }
 
 .dark-theme {
@@ -52,6 +54,7 @@ li {
     --fontColor: var(--background);
     --btnBg: var(--black);
     --btnFontColor: var(--buttonback);
+    --postMidbg: var(--middark);
 }
 
 #right {

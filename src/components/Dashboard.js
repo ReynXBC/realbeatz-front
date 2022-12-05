@@ -1,5 +1,5 @@
 import { useState} from "react";
-
+import Post from "./Post";
 
 const Dashboard = () => {
 
@@ -8,6 +8,7 @@ const Dashboard = () => {
             username: "foobar",
             content: "This is not a great website!!!!",
             numOfLikes: 10,
+            timeStamp: "3:40 10/11/2022",
             comments: [
                 {
                     poster: "sunkit",
@@ -23,7 +24,7 @@ const Dashboard = () => {
 
         return (
             <div>
-                <p>Welcome to your Dashboard</p>
+                <Post postDetails={postDetails}/>
             </div>
         //    Comment poster component
 

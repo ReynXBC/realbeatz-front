@@ -1,18 +1,19 @@
 .postContainer {
-    border: black solid thin;
-    padding: 5px;
-    max-width: 50%;
+    /*border: black solid thin;*/
+    padding: 2%;
+    max-width: 100%;
 }
 
 .postHeaderDiv {
-    border: blue solid thin;
+    /*border: blue solid thin;*/
     display: flex;
     justify-content: space-between;
-
+    background: var(--postMidbg);
+    border-radius: 25px;
 }
 
 .postContentDiv {
-    border: blue solid thin;
+    /*border: blue solid thin;*/
 
 }
 
@@ -20,22 +21,28 @@
     min-height: 100px;
     min-width: 70%;
     padding: 10px;
+    border-radius: 25px;
+    background: var(--postMidbg);
 }
 
 .postProfileDiv span {
-    position: absolute;
-    top: 15px;
+    position: relative;
+    top: -16px;
     margin-left: 10px;
 }
 
 .postProfileDiv img {
     width: 50px;
     border-radius: 50%;
+    margin-left: 2px;
+    margin-top: 2px;
 }
 
 .postFooterDiv {
-    border: blue solid thin;
+    /*border: blue solid thin;*/
     display: flex;
+    background: var(--postMidbg);
+    border-radius: 25px;
 }
 
 
@@ -50,16 +57,32 @@
 }
 
 .postCommentInputDiv {
-    position: relative;
+    /*position: relative;*/
 }
 
 .postCommentInputDiv input[type="text"] {
     width: 70%;
-
+    margin-top: 50px;
 }
 
 .postLikeDiv {
     display: flex;
     vertical-align: center;
     padding: 10px 0 10px 0;
+}
+
+.postCommentDiv {
+    background: var(--postMidbg);
+    margin-left: 50px;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+.postCommentDiv p {
+    margin-left: 5px;
+}
+
+.postCommentInputDiv button{
+    vertical-align: center;
+    display: flex;
 }

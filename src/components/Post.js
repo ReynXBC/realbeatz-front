@@ -25,15 +25,16 @@ export default function Post({postDetails}) {
                     <span>Username: {postDetails.username}</span>
                 </div>
                 <div className={"postTimeStampDiv"}>
-                    <span>time</span>
+                    <span>{postDetails.timeStamp}</span>
                 </div>
             </div>
             <div className={"postContentDiv"}>
+                {/*<span>{postDetails.comments.poster}</span>*/}
                 <p><span>{postDetails.content}</span></p>
             </div>
             <div className={'postFooterDiv'}>
                 <div className={'postLikeDiv'}>
-                    <button>Like</button>
+                    <button className={"btn"}>Like</button>
                 </div>
                 <div className={"postCommentInputDiv"}>
                     <form id="postCommentForm" onSubmit={handlePostComment}>
