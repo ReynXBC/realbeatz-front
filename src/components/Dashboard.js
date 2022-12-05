@@ -24,7 +24,7 @@ const Dashboard = () => {
 
         return (
             <div>
-                <Post postDetails={postDetails}/>
+                <Post postDetails={postDetails[0]}/>
             </div>
         //    Comment poster component
 

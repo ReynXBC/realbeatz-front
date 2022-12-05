@@ -2,6 +2,7 @@ import {useState} from "react";
 
 export default function Post({postDetails}) {
     const [commentInput, setCommentInput] = useState();
+    console.log(postDetails);
 
 
     const handlePostComment = (event) => {
@@ -25,7 +26,7 @@ export default function Post({postDetails}) {
                     <span>Username: {postDetails.username}</span>
                 </div>
                 <div className={"postTimeStampDiv"}>
-                    <span>{postDetails.timeStamp}</span>
+                    <span>Time posted: {postDetails.timeStamp}</span>
                 </div>
             </div>
             <div className={"postContentDiv"}>
