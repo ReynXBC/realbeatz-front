@@ -7,7 +7,6 @@ import {Navigate} from "react-router-dom";
 import "./css/Post.css";
 import Navbar from "./components/Navbar"
 
-
 function App() {
   const [authenticated, setAuthenticated] = useState({isAuthenticated: false});
   useEffect(() => {

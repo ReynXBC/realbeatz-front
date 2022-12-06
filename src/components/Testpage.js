@@ -1,10 +1,11 @@
-
+import LoginTest from "../test-components/LoginTest";
 
 function TestPage() {
 
 
     return(
         <>
+          <LoginTest />
         </>
     )
 }
