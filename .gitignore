@@ -23,5 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 
+### Project Testing ###
+src/test-components
+
+
 # Intellij IDEA
 .idea
