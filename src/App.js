@@ -58,7 +58,6 @@ function App() {
             <Dashboard/>
           </div>
           <div id={'right'}>
-
             <FriendList/>
           </div>
         </div>

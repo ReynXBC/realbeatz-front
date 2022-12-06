@@ -41,23 +41,33 @@
 .postFooterDiv {
     /*border: blue solid thin;*/
     display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
     background: var(--postMidbg);
     border-radius: 25px;
 }
 
 
 .postCommentInputDiv form {
-    display: inline;
+    display: flex;
     margin-left: 100px;
-    /*vertical-align: center;*/
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     /*position: absolute;*/
     /*top: 50%;*/
     /*left: 50%;*/
     /*transform: translate(50%, 50%);*/
 }
 
+#postCommentInput {
+    margin: 0;
+}
+
 .postCommentInputDiv {
-    /*position: relative;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .postCommentInputDiv input[type="text"] {
@@ -83,6 +93,13 @@
 }
 
 .postCommentInputDiv button{
-    vertical-align: center;
+    /*vertical-align: center;
+    display: flex;*/
     display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.postTimeStampDiv {
+    margin-right: 15px;
+    margin-top: 5px;
 }

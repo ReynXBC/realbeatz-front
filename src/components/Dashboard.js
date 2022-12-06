@@ -1,9 +1,9 @@
 import { useState} from "react";
-import Post from "./Post";
+import postList from "./PostList";
 
 const Dashboard = () => {
 
-    const [postDetails, setPostDetails] = useState([
+    const [postList, setPostList] = useState([
         {
             username: "foobar",
             content: "This is not a great website!!!!",
@@ -13,6 +13,34 @@ const Dashboard = () => {
                 {
                     poster: "sunkit",
                     content: "Yes, I agree"
+                },
+                {
+                    poster: "roger",
+                    content: "I think it's pretty cool"
+                },
+                {
+                    poster: "cole",
+                    content: "I know its terrible because I made it"
+                }
+            ]
+        },
+        {
+            username: "heehoo",
+            content: "This is not a great website!!!!",
+            numOfLikes: 10,
+            timeStamp: "5:40 10/11/2022",
+            comments: [
+                {
+                    poster: "sunkit",
+                    content: "Yes, I agree"
+                },
+                {
+                    poster: "roger",
+                    content: "I think it's pretty cool"
+                },
+                {
+                    poster: "cole",
+                    content: "I know its terrible because I made it"
                 }
             ]
         }
@@ -24,13 +52,8 @@ const Dashboard = () => {
 
         return (
             <div>
-                <Post postDetails={postDetails[0]}/>
+                <postList postList={postList}/>
             </div>
-        //    Comment poster component
-
-        //    Post list
-        //      - post
-        //      - post
         );
 };
 export default Dashboard;

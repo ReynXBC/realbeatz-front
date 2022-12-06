@@ -26,11 +26,10 @@ export default function Post({postDetails}) {
                     <span>Username: {postDetails.username}</span>
                 </div>
                 <div className={"postTimeStampDiv"}>
-                    <span>Time posted: {postDetails.timeStamp}</span>
+                    <span>{postDetails.timeStamp}</span>
                 </div>
             </div>
             <div className={"postContentDiv"}>
-                {/*<span>{postDetails.comments.poster}</span>*/}
                 <p><span>{postDetails.content}</span></p>
             </div>
             <div className={'postFooterDiv'}>
@@ -48,7 +47,11 @@ export default function Post({postDetails}) {
                 </div>
             </div>
             <div className={"postCommentDiv"}>
-                <p>This is a comment</p>
+                {
+                    postDetails.comments.map(comment => {
+                        return <p>{comment.poster}: {comment.content}</p>
+                    })
+                }
             </div>
         </div>
     )

@@ -7,6 +7,12 @@
     --middark: #6c6c7e;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #container {
     min-height: 100vh;
 }
@@ -92,6 +98,12 @@ li {
     width: 15%;
     border: 3px solid var(--fontColor);
 }
+
+#tleft h1 {
+    horiz-align: center;
+    vertical-align: center;
+}
+
 #tmid {
     width: 85%;
     border: 3px solid var(--fontColor);
@@ -129,4 +141,10 @@ li {
 
 #friendListDiv span {
 
+}
+
+.navbutton {
+    background: var(--background);
+    height: 40px;
+    width: 100%;
 }
