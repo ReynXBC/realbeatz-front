@@ -7,8 +7,8 @@ export default function FriendPageCard({friend}) {
                 <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2vVVG2BOns1aicnn0wKmKn3aYtHCcBiysWlpz_c&s"}/>
             </div>
             <div className="friendPageCardDetailsDiv">
-                <span>{friend.username}</span> <br/>
-                <span>{friend.firstName} {friend.lastName}</span>
+                <p>{friend.username}</p>
+                <p>{friend.firstName} {friend.lastName}</p>
             </div>
         </div>
     );

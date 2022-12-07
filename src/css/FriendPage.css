@@ -1,0 +1,21 @@
+.friendPageCardImageDiv img {
+    border-radius: 50%;
+}
+
+.friendPageCardDetailsDiv {
+
+}
+
+.friendPageCardDetailsDiv p {
+    text-align: center;
+}
+
+.friendPageCard {
+    padding: 10px;
+}
+
+#friendPageDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

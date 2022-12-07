@@ -20,7 +20,7 @@ function FriendPageMenu() {
     }, []);
 
     return (
-        <div id={'friendListDiv'}>
+        <div id={'friendPageDiv'}>
             {
                 friendsList.map(friend => {
                     console.log(friend);
