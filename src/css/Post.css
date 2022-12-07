@@ -50,7 +50,6 @@
     padding: 0 2rem;
     background: var(--postMidbg);
     border-bottom-right-radius: 25px;
-
     border-bottom-left-radius: 25px;
     margin-top: 10px;
 }
@@ -110,4 +109,18 @@
 .postTimeStampDiv {
     margin-right: 15px;
     margin-top: 5px;
+}
+
+.postEntryDiv {
+    display: flex;
+    background: var(--postMidbg);
+    padding: 10px;
+    max-width: 100%;
+    border-radius: 25px;
+    margin: 1%;
+    justify-content: right;
+}
+
+#postEntryForm input{
+    height: 80%;
 }
