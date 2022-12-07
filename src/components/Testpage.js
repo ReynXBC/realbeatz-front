@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import FriendPageCard from "./FriendPageCard";
+import FriendPageCard from "./friends/FriendPageCard";
 import "../css/FriendPage.css"
 
 function TestPage() {

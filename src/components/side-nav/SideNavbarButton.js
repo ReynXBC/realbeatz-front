@@ -1,6 +1,6 @@
 
 
-export default function NavbarButton({name}) {
+export default function SideNavbarButton({name}) {
     return (
         <div>
             <button className = "navbutton">{name}</button>

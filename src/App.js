@@ -2,10 +2,10 @@ import './App.css';
 import {useEffect, useState} from 'react';
 import './components/Dashboard.js';
 import Dashboard from "./components/Dashboard";
-import FriendList from "./components/FriendsList";
+import FriendList from "./components/friendlist/FriendsList";
 import {Navigate} from "react-router-dom";
 import "./css/Post.css";
-import Navbar from "./components/Navbar";
+import SideNavbar from "./components/side-nav/SideNavbar";
 import "./css/Navbar.css";
 import "./css/Friendlist.css";
 
@@ -54,7 +54,7 @@ function App() {
         </div>
         <div id={'out'} className={theme.className}>
           <div id={'left'}>
-            <Navbar/>
+            <SideNavbar/>
           </div>
           <div id={'mid'}>
             <Dashboard/>
