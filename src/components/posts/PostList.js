@@ -1,6 +1,6 @@
 import Post from "./Post";
 
-export default function postList({postList}) {
+export default function PostList({postList}) {
     return(
         postList.map(postDetails => {
             return (
