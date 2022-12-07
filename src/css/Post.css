@@ -1,6 +1,6 @@
 .postContainer {
     /*border: black solid thin;*/
-    padding: 2%;
+    padding: 1%;
     max-width: 100%;
 }
 
@@ -9,7 +9,8 @@
     display: flex;
     justify-content: space-between;
     background: var(--postMidbg);
-    border-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
 }
 
 .postContentDiv {
@@ -18,17 +19,21 @@
 }
 
 .postContentDiv p {
-    min-height: 100px;
+    min-height: 20px;
     min-width: 70%;
     padding: 10px;
-    border-radius: 25px;
+    /*border-radius: 25px;*/
+
     background: var(--postMidbg);
+    margin-top: 10px;
+    font-size: large;
 }
 
 .postProfileDiv span {
     position: relative;
     top: -16px;
     margin-left: 10px;
+    font-size: large;
 }
 
 .postProfileDiv img {
@@ -44,7 +49,10 @@
     justify-content: space-between;
     padding: 0 2rem;
     background: var(--postMidbg);
-    border-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    border-bottom-left-radius: 25px;
+    margin-top: 10px;
 }
 
 
@@ -89,7 +97,7 @@
 }
 
 .postCommentDiv p {
-    margin-left: 5px;
+    margin-left: 20px;
 }
 
 .postCommentInputDiv button{

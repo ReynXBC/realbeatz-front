@@ -5,7 +5,9 @@ import Dashboard from "./components/Dashboard";
 import FriendList from "./components/FriendsList";
 import {Navigate} from "react-router-dom";
 import "./css/Post.css";
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar";
+import "./css/Navbar.css";
+import "./css/Friendlist.css";
 
 function App() {
   const [authenticated, setAuthenticated] = useState({isAuthenticated: false});

@@ -1,0 +1,26 @@
+.friendCard {
+    border: 1px solid var(--white);
+    padding: 3px;
+    display: flex;
+    gap: 15px;
+}
+
+.friendCard img {
+    width: 50px;
+    border-radius: 50%;
+    border: pink solid thick;
+}
+
+.friendCardDetailsDiv {
+
+}
+
+#friendListDiv {
+    height: 100%;
+    width: 100%;
+
+}
+
+#friendListDiv span {
+
+}

@@ -26,21 +26,17 @@ const Dashboard = () => {
         },
         {
             username: "heehoo",
-            content: "This is not a great website!!!!",
+            content: "Dr. Talbott is an easy A",
             numOfLikes: 10,
-            timeStamp: "5:40 10/11/2022",
+            timeStamp: "5:40 12/5/2022",
             comments: [
                 {
                     poster: "sunkit",
                     content: "Yes, I agree"
                 },
                 {
-                    poster: "roger",
-                    content: "I think it's pretty cool"
-                },
-                {
                     poster: "cole",
-                    content: "I know its terrible because I made it"
+                    content: "It's actually crazy"
                 }
             ]
         }
