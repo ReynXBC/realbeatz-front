@@ -4,12 +4,11 @@ export default function SideNavbar() {
     return (
         <div id={"SideNavbar"}>
             <div>
-                <SideNavbarButton name={"Friends"}/>
-                <SideNavbarButton name={"Messaging"}/>
+                <SideNavbarButton name={"Friends"} to={"friends"}/>
             </div>
             <div>
-                <SideNavbarButton name={"Profile"}/>
-                <SideNavbarButton name={"Settings"}/>
+                <SideNavbarButton name={"Profile"} to={"profile"}/>
+                <SideNavbarButton name={"Settings"} to={"settings"}/>
             </div>
         </div>
     )

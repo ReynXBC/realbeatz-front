@@ -11,6 +11,9 @@ import TestPage from "./components/Testpage";
 import PostList from "./components/posts/PostList";
 import Header from "./components/header/Header";
 import {getPosts} from "./services/post-service";
+import FriendPage from "./components/friends/FriendPage";
+import Profile from "./components/profile/Profile";
+import Settings from "./components/settings/Settings";
 
 function App() {
   const [theme, setTheme] = useState({className: 'dark-theme', name: 'Dark'})
