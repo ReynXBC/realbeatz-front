@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, {useState, useEffect} from "react";
 import FriendPageCard from "./FriendPageCard";
 
-function TestPage() {
+
+function FriendPageMenu() {
 
     let [friendsList, setFriendsList] = useState([]);
     useEffect(() => {
@@ -19,7 +20,7 @@ function TestPage() {
     }, []);
 
     return (
-        <div id={'friendPageDiv'}>
+        <div id={'friendListDiv'}>
             {
                 friendsList.map(friend => {
                     console.log(friend);
@@ -27,9 +28,8 @@ function TestPage() {
                         <FriendPageCard friend={friend} />
                     )
                 })
-            }
-        </div>
+            }</div>
     );
 }
 
-export default TestPage;
+export default FriendPageMenu;
