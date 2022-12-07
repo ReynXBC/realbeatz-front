@@ -4,6 +4,7 @@ export default function SideNavbar() {
     return (
         <div id={"SideNavbar"}>
             <div>
+                <SideNavbarButton name={"Posts"} to={"posts"}/>
                 <SideNavbarButton name={"Friends"} to={"friends"}/>
             </div>
             <div>

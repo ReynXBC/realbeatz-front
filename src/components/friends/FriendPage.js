@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import FriendPageCard from "./FriendPageCard";
+import {API_URL} from "../../config/WebConfigs";
 
 export default function FriendPage() {
 
@@ -8,7 +9,7 @@ export default function FriendPage() {
 
         // fetch data from server
         if (!userList.length) {
-            fetch("http://localhost:8080/api/test/friends")
+            fetch(API_URL + "/test/friends")
                 .then(response => response.json())
                 .then(data => {
                     console.log("fetching data...")
