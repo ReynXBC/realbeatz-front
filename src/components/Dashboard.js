@@ -1,5 +1,5 @@
 import { useState} from "react";
-import postList from "./PostList";
+import PostList from "./PostList";
 
 const Dashboard = () => {
 
@@ -52,7 +52,7 @@ const Dashboard = () => {
 
         return (
             <div>
-                <postList postList={postList}/>
+                <PostList postList={postList}/>
             </div>
         );
 };
