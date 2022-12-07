@@ -1,55 +1,34 @@
-import { useState} from "react";
+import React, {useState} from "react";
 import PostList from "./posts/PostList";
+import SideNavbar from "./side-nav/SideNavbar";
+import FriendList from "./friendlist/FriendsList";
+import {Outlet} from "react-router-dom";
 
-const Dashboard = () => {
+const Dashboard = ({theme}) => {
 
-    const [postList, setPostList] = useState([
-        {
-            username: "foobar",
-            content: "This is not a great website!!!!",
-            numOfLikes: 10,
-            timeStamp: "3:40 10/11/2022",
-            comments: [
-                {
-                    poster: "sunkit",
-                    content: "Yes, I agree"
-                },
-                {
-                    poster: "roger",
-                    content: "I think it's pretty cool"
-                },
-                {
-                    poster: "cole",
-                    content: "I know its terrible because I made it"
-                }
-            ]
-        },
-        {
-            username: "heehoo",
-            content: "Dr. Talbott is an easy A",
-            numOfLikes: 10,
-            timeStamp: "5:40 12/5/2022",
-            comments: [
-                {
-                    poster: "sunkit",
-                    content: "Yes, I agree"
-                },
-                {
-                    poster: "cole",
-                    content: "It's actually crazy"
-                }
-            ]
-        }
-    ]);
 
-    function fetchPosts() {
-        // fetch()
-    }
 
-        return (
-            <div>
-                <PostList postList={postList}/>
-            </div>
-        );
-};
+  function fetchPosts() {
+    // fetch()
+  }
+
+  return (
+    <div id={"container"}>
+      <div id={'out'} className={theme.className}>
+        <div id={'left'}>
+          <SideNavbar/>
+        </div>
+        <div id={'mid'}>
+          {/*<div>*/}
+          {/*  <PostList postList={postList}/>*/}
+          {/*</div>*/}
+          <Outlet/>
+        </div>
+        <div id={'right'}>
+          <FriendList/>
+        </div>
+      </div>
+    </div>
+  );
+}
 export default Dashboard;
