@@ -21,7 +21,7 @@
   margin: 0.5rem;
 }
 
-#friendPageDiv {
+.friendPageDiv {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
