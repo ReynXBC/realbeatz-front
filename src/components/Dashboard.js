@@ -4,15 +4,17 @@ import FriendList from "./friendlist/FriendsList";
 import {Outlet} from "react-router-dom";
 import {useAuthenticationCheck} from "../security/security";
 import {fetchUserDetails} from "../services/user-service";
+import {storeUser} from "../utils/user-utils";
 
-const Dashboard = ({isAuthenticated, theme, username, setUser}) => {
+const Dashboard = ({isAuthenticated, theme, username}) => {
   useAuthenticationCheck(isAuthenticated);
 
   useEffect(() => {
     fetchUserDetails(username)
       .then(user => {
+        console.log("Successfully fetched user")
         console.log(user)
-        setUser(user);
+        storeUser(user);
       })
       .catch(error => console.log(error));
   }, [])

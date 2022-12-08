@@ -1,3 +1,14 @@
+function storeUser(user) {
+  console.log("Storing user")
+  console.log(user)
+  localStorage.setItem("user", JSON.stringify(user));
+}
+
+
+function fetchUserFromStorage() {
+  return JSON.parse(localStorage.getItem("user"));
+}
+
 function compileUserDetails(user) {
   return {
     id: user.id,
@@ -11,4 +22,4 @@ function compileUserDetails(user) {
   }
 }
 
-export {compileUserDetails};
+export {compileUserDetails, fetchUserFromStorage, storeUser};

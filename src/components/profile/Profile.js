@@ -1,9 +1,10 @@
 import {useEffect, useState} from "react";
-import {compileUserDetails} from "../../utils/user-utils";
+import {compileUserDetails, fetchUserFromStorage} from "../../utils/user-utils";
 
-export default function Profile({user}) {
+export default function Profile() {
 
   useEffect(() => {
+    let user = fetchUserFromStorage();
     let compiledUserDetails = compileUserDetails(user);
     setUserDetails(compiledUserDetails);
   })

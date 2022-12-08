@@ -23,7 +23,6 @@ function FriendList() {
         <div id={'friendListDiv'}>
             {
                 friendsList.map(friend => {
-                    console.log(friend);
                     return (
                         <FriendCard friend={friend} />
                     )
