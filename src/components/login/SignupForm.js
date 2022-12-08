@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import PictureUploader from "./PictureUploader";
 
 
 const SignupForm = () => {
     const navigate = useNavigate();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
     const users = [{ username: "Admin", password: "123456789" }];
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -24,13 +27,13 @@ const SignupForm = () => {
                     type="text"
                     name="First Name"
                     value={firstName}
-                    onChange={(e) => setUsername(e.target.value)}
+                    onChange={(e) => setFirstName(e.target.value)}
                 /><br/>
                 <input
                     type="text"
                     name="Last Name"
                     value={lastName}
-                    onChange={(e) => setUsername(e.target.value)}
+                    onChange={(e) => setLastName(e.target.value)}
                 /><br/>
                 <input
                     type="text"
@@ -49,6 +52,7 @@ const SignupForm = () => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <input type="submit" value="Login" />
+                <PictureUploader />
             </form>
         </div>
     )

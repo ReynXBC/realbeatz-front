@@ -43,6 +43,7 @@
     transition: 0.25s;
     color: var(--fontColor);
     background-color: var(--middark);
+    cursor: pointer;
 }
 
 li {

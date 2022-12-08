@@ -11,6 +11,7 @@
     transition: 0.25s;
     color: var(--black);
     background-color: var(--background);
+    cursor: pointer;
 }
 
 .menubottom {
