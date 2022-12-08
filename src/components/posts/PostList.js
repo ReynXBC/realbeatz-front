@@ -6,12 +6,6 @@ export default function PostList({postList}) {
   const [postInput, setPostInput] = useState();
   console.log(postList);
 
-  const handlePost = (event) => {
-    event.preventDefault();
-    console.log(event.target);
-    // use fetch to call api
-  };
-
 
   function handlePostInputChange(event) {
     let value = event.target.value;
@@ -29,7 +23,7 @@ export default function PostList({postList}) {
               type="text" id="postCommentInput"
               name="postCommentInput" onChange={handlePostInputChange}
               value={postInput}/>
-            <button className="btn" onClick={handlePost()}>Post</button>
+            <submit className="btn" onClick={handlePost}>Post</submit>
           </form>
         </div>
       </div>
