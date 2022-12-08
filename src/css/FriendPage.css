@@ -1,5 +1,7 @@
 .friendPageCardImageDiv img {
     border-radius: 50%;
+    width: 150px;
+    height: 150px;
 }
 
 .friendPageCardDetailsDiv {
@@ -12,10 +14,14 @@
 
 .friendPageCard {
     padding: 10px;
+    background: var(--middark);
+    border-radius: 2rem;
+    margin: 0.5rem;
 }
 
 #friendPageDiv {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }

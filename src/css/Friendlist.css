@@ -6,7 +6,8 @@
 }
 
 .friendCard img {
-    width: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: pink solid thick;
 }
