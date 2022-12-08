@@ -1,7 +1,16 @@
 .navbutton {
-    background: var(--background);
-    height: 40px;
+    background: var(--darkbg);
+    height: 60px;
     width: 100%;
+    color: var(--fontColor);
+    border: none;
+    font-size: large;
+}
+
+.navbutton:hover {
+    transition: 0.25s;
+    color: var(--black);
+    background-color: var(--background);
 }
 
 .menubottom {

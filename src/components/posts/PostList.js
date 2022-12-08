@@ -19,15 +19,17 @@ export default function PostList({postList}) {
         setPostInput(value);
     }
     return(
-        <div className="PostDiv">
-            <div className="postEntryDiv">
-                <form id="postEntryForm" onSubmit={handlePost}>
-                    <input
-                        type="text" id="postCommentInput"
-                        name="postCommentInput" onChange={handlePostInputChange}
-                        value={postInput}/>
-                    <button className="btn">Post</button>
-                </form>
+        <div className="postDiv">
+            <div className="postEntryContainer">
+                <div className="postEntryDiv">
+                    <form id="postEntryForm" onSubmit={handlePost}>
+                        <input
+                            type="text" id="postCommentInput"
+                            name="postCommentInput" onChange={handlePostInputChange}
+                            value={postInput}/>
+                        <button className="btn">Post</button>
+                    </form>
+                </div>
             </div>
             <div className="postListDiv">
                 {
