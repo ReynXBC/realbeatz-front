@@ -53,7 +53,7 @@ async function fetchAllUsers() {
   }).then(response => response.json());
 }
 
-async function addNewFriend(friendId, message="") {
+async function addNewFriend(friendId, message = "") {
   console.log("Sending friend request...");
   return await fetch(ADD_NEW_FRIEND_URL, {
     method: "post",
@@ -112,7 +112,23 @@ async function confirmFriendRequest(requesterId) {
   });
 }
 
-export {fetchUserDetails, fetchAllFriends,
+async function refuseFriendRequest(requesterId) {
+  console.log("Refusing friend request...")
+  return await fetch(REFUSE_FRIEND_REQUEST_URL, {
+    method: "post",
+    headers: {
+      "Authorization": authHeader["Authorization"],
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      requesterId: requesterId
+    })
+  });
+}
+
+export {
+  fetchUserDetails, fetchAllFriends,
   fetchAllUsers, addNewFriend, fetchAllFriendRequestsReceived,
-  fetchAllRelatedPosts,createNewPost, confirmFriendRequest,
-  GET_PROFILE_PIC_URL};
+  fetchAllRelatedPosts, createNewPost, confirmFriendRequest,
+  refuseFriendRequest, GET_PROFILE_PIC_URL
+};

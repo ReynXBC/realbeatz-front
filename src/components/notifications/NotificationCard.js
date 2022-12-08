@@ -1,5 +1,5 @@
 import React from "react";
-import {confirmFriendRequest, GET_PROFILE_PIC_URL} from "../../services/user-service";
+import {confirmFriendRequest, GET_PROFILE_PIC_URL, refuseFriendRequest} from "../../services/user-service";
 
 export default function NotificationCard({request}) {
   function acceptFriend(id) {
@@ -8,7 +8,8 @@ export default function NotificationCard({request}) {
   }
 
   function refuseFriend(id) {
-
+    refuseFriendRequest(id)
+      .catch(error => console.log(error));
   }
 
   let profilePictureURL = GET_PROFILE_PIC_URL + "/" + request.requesterProfilePictureFullName;
