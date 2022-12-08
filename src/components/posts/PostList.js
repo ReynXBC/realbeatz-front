@@ -1,16 +1,10 @@
 import Post from "./Post";
 import {useState} from "react";
 
-export default function PostList({postList}) {
+export default function PostList({postList, handlePost}) {
 
   const [postInput, setPostInput] = useState();
   console.log(postList);
-
-  const handlePost = (event) => {
-    event.preventDefault();
-    console.log(event.target);
-    // use fetch to call api
-  };
 
 
   function handlePostInputChange(event) {
@@ -26,8 +20,8 @@ export default function PostList({postList}) {
           <label>Post Here!: </label>
           <form id="postEntryForm" onSubmit={handlePost}>
                         <textarea
-                          type="text" id="postCommentInput"
-                          name="postCommentInput" onChange={handlePostInputChange}
+                          id="postCommentInput"
+                          name="postContent" onChange={handlePostInputChange}
                           value={postInput}/>
             <button className="btn">Post</button>
           </form>

@@ -17,7 +17,12 @@ import FriendPage from "./components/friends/FriendPage";
 import Profile from "./components/profile/Profile";
 import Settings from "./components/settings/Settings";
 import SignupForm from "./components/login/SignupForm";
-import {fetchAllFriendRequestsReceived, fetchAllRelatedPosts, fetchAllUsers} from "./services/user-service";
+import {
+  createNewPost,
+  fetchAllFriendRequestsReceived,
+  fetchAllRelatedPosts,
+  fetchAllUsers
+} from "./services/user-service";
 import NotificationPage from "./components/notifications/NotifcationPage";
 
 function App() {
@@ -86,6 +91,18 @@ function App() {
       })
   }, [])
 
+  function handlePost(event) {
+    event.preventDefault();
+    let content = event.target.elements.postContent.value;
+    createNewPost(content)
+      .then(newPost => {
+        console.log("new post")
+        console.log(newPost)
+        let newList = [...postList];
+        newList.push(newPost);
+        setPostList(newList.reverse());
+      })
+  }
 
   return (
     <>
@@ -95,7 +112,7 @@ function App() {
       <Routes>
         <Route index element={<Dashboard isAuthenticated={isAuthenticated} theme={theme} username={username}/>}/>
         <Route path="/" element={<Dashboard isAuthenticated={isAuthenticated} theme={theme} username={username}/>}>
-          <Route path="posts" element={<PostList postList={postList}/>}/>
+          <Route path="posts" element={<PostList postList={postList} handlePost={handlePost}/>}/>
           <Route path="friends" element={<FriendPage users={userList}/>}/>
           <Route path="notifications" element={<NotificationPage requests={friendRequestList}/>}/>
           <Route path="profile" element={<Profile/>}/>

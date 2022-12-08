@@ -8,6 +8,7 @@ const GET_ALL_USERS_URL = API_URL + "/user/all";
 const ADD_NEW_FRIEND_URL = API_URL + "/user/friends/request";
 const GET_ALL_FRIEND_REQUESTS_URL = API_URL + "/user/friends/request/all";
 const GET_ALL_RELATED_POST_URL = API_URL + "/post/get-all-related";
+const CREATE_NEW_POST_URL = API_URL + "/post/create";
 const GET_PROFILE_PIC_URL = API_URL + "/user/profile-pictures";
 
 
@@ -77,7 +78,23 @@ async function fetchAllRelatedPosts() {
   }).then(response => response.json());
 }
 
+async function createNewPost(content) {
+  console.log("Creating new post...")
+  return await fetch(CREATE_NEW_POST_URL, {
+    method: "post",
+    headers: {
+      "Authorization": authHeader["Authorization"],
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      content: content,
+      songTitle: "",
+      artists: ""
+    })
+  }).then(response => response.json());
+}
+
 
 export {fetchUserDetails, fetchAllFriends,
   fetchAllUsers, addNewFriend, fetchAllFriendRequestsReceived,
-  fetchAllRelatedPosts, GET_PROFILE_PIC_URL};
+  fetchAllRelatedPosts,createNewPost, GET_PROFILE_PIC_URL};
