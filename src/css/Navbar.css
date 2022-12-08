@@ -1,16 +1,16 @@
 .navbutton {
-    background: var(--darkbg);
+    background: var(--sidebar);
     height: 60px;
     width: 100%;
-    color: var(--fontColor);
+    color: var(--buttonback);
     border: none;
     font-size: large;
 }
 
 .navbutton:hover {
     transition: 0.25s;
-    color: var(--black);
-    background-color: var(--background);
+    color: var(--fontColor);
+    background-color: var(--darkbg);
     cursor: pointer;
 }
 

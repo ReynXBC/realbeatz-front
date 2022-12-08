@@ -3,6 +3,8 @@
     margin: 1rem;
     width: 200px;
     height: 200px;
+    border: solid thick;
+    border-color: var(--buttonback)
 }
 
 .profilePicture {

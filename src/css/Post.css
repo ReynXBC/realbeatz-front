@@ -2,9 +2,9 @@
     /*border: black solid thin;*/
     padding: 1%;
     max-width: 100%;
-    background: var(--background);
+    background: var(--buttonback);
     border-radius: 2rem;
-
+    margin: 10px;
 }
 
 .postHeaderDiv {
@@ -45,6 +45,8 @@
     margin-top: 2px;
     width: 60px;
     height: 60px;
+    border: solid thick;
+    border-color: var(--buttonback);
 }
 
 .postFooterDiv {
@@ -122,8 +124,23 @@
     max-width: 100%;
     border-radius: 2rem;
     margin: 1%;
-    justify-content: right;
+    justify-content: center;
 
+}
+
+.postEntryDiv form {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.postEntryDiv form textarea {
+    min-width: 600px;
+    min-height: 100px;
+    resize: none;
+}
+
+.postEntryDiv button {
+    width: 100px;
 }
 
 #postEntryForm input{
@@ -131,7 +148,7 @@
 }
 
 .postEntryContainer {
-    background: var(--background);
+    background: var(--buttonback);
     border-radius: 2rem;
     padding: 0.5rem;
 }

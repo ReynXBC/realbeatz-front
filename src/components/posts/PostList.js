@@ -24,7 +24,7 @@ export default function PostList({postList}) {
             <div className="postEntryContainer">
                 <div className="postEntryDiv">
                     <form id="postEntryForm" onSubmit={handlePost}>
-                        <input
+                        <textarea
                             type="text" id="postCommentInput"
                             name="postCommentInput" onChange={handlePostInputChange}
                             value={postInput}/>
