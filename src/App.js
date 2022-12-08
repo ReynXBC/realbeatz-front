@@ -68,8 +68,8 @@ function App() {
         <Header theme={theme} setTheme={setTheme}/>
       </div>
       <Routes>
-        <Route index element={<Dashboard isAuthenticated={isAuthenticated} theme={theme} username={username} setUser={setUser}/>}/>
-        <Route path="/" element={<Dashboard isAuthenticated={isAuthenticated} theme={theme}/>}>
+        <Route index element={<Dashboard isAuthenticated={isAuthenticated} theme={theme} username={username} />}/>
+        <Route path="/" element={<Dashboard isAuthenticated={isAuthenticated} theme={theme} username={username}/>}>
           <Route path="posts" element={<PostList postList={postList}/>}/>
           <Route path="friends" element={<FriendPage  />}/>
           <Route path="profile" element={<Profile  />}/>

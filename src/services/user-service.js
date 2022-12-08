@@ -1,7 +1,7 @@
 import {API_URL} from "../config/api-config";
 
 const GET_USER_URL = API_URL + "/user"
-const GET_PROFILE_PIC_URL = API_URL + "/user/profile-pictures/"
+const GET_PROFILE_PIC_URL = API_URL + "/user/profile-pictures"
 
 
 let accessToken = null;
@@ -19,8 +19,8 @@ function loadTokensFromStorage() {
 
 async function fetchUserDetails(username) {
   loadTokensFromStorage();
-
-  let url = new URL(GET_USER_URL + "/" + "admin");
+  console.log("fetching user details for : " + username);
+  let url = new URL(GET_USER_URL + "/" + username);
   url.search = new URLSearchParams({isUsername: true}).toString();
 
   return await fetch(url, {
