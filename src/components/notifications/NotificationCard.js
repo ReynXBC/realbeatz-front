@@ -2,13 +2,13 @@ import React from "react";
 import {confirmFriendRequest, GET_PROFILE_PIC_URL, refuseFriendRequest} from "../../services/user-service";
 
 export default function NotificationCard({request}) {
-  function acceptFriend(id) {
-    confirmFriendRequest(id)
+  function acceptFriend() {
+    confirmFriendRequest(request.requesterId)
       .catch(error => console.log(error));
   }
 
-  function refuseFriend(id) {
-    refuseFriendRequest(id)
+  function refuseFriend() {
+    refuseFriendRequest(request.requesterId)
       .catch(error => console.log(error));
   }
 
@@ -23,8 +23,8 @@ export default function NotificationCard({request}) {
         <div className="friendPageCardDetailsDiv">
           <p><span className="bold">{request.requesterName}</span></p>
           <p>wants to be your friend!</p>
-          <button className={'btn'} onClick={acceptFriend(request.requesterId)}>Accept</button>
-          <button className={'btn'} onClick={refuseFriend(request.requesterId)}>Refuse</button>
+          <button className={'btn'} onClick={acceptFriend}>Accept</button>
+          <button className={'btn'} onClick={refuseFriend}>Refuse</button>
         </div>
       </div>
     );
