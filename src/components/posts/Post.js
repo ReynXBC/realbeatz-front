@@ -24,7 +24,7 @@ export default function Post({postDetails}) {
                 <div className={"postProfileDiv"}>
                     <img
                         src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2vVVG2BOns1aicnn0wKmKn3aYtHCcBiysWlpz_c&s"}/>
-                    <span>Username: {postDetails.username}</span>
+                    <span>{postDetails.username}</span>
                 </div>
                 <div className={"postTimeStampDiv"}>
                     <span>{postDetails.timeStamp}</span>
