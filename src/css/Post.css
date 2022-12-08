@@ -106,19 +106,11 @@
 }
 
 .postCommentInputDiv button {
-<<<<<<< HEAD
   /*vertical-align: center;
   display: flex;*/
   display: flex;
   justify-content: center;
   align-items: center;
-=======
-    /*vertical-align: center;
-    display: flex;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
->>>>>>> 33857aca1e96148c54347ae73e61740a5a6b9b68
 }
 
 .postTimeStampDiv {
@@ -160,11 +152,7 @@
 }
 
 #postEntryForm input {
-<<<<<<< HEAD
   height: 80%;
-=======
-    height: 80%;
->>>>>>> 33857aca1e96148c54347ae73e61740a5a6b9b68
 }
 
 .postEntryContainer {
