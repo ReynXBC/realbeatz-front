@@ -1,9 +1,11 @@
 import {useEffect, useState} from "react";
+import {compileUserDetails} from "../../utils/user-utils";
 
 export default function Profile({user}) {
 
   useEffect(() => {
-    setUserDetails(user);
+    let compiledUserDetails = compileUserDetails(user);
+    setUserDetails(compiledUserDetails);
   })
 
   const [userDetails, setUserDetails] = useState(
