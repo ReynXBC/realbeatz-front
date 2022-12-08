@@ -1,129 +1,129 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=sway");
 
 :root {
-    --almostblack: #242426;
-    --background: #d3d6df;
-    --buttonback: rgba(252, 187, 186, 0.77);
-    --white: #FFFFFF;
-    --darkbg: #363638;
-    --black: #000000;
-    --middark: #4d4e54;
-    --midlight: #888991;
+  --almostblack: #242426;
+  --background: #d3d6df;
+  --buttonback: rgba(252, 187, 186, 0.77);
+  --white: #FFFFFF;
+  --darkbg: #363638;
+  --black: #000000;
+  --middark: #4d4e54;
+  --midlight: #888991;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
 }
 
 #container {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 #out {
-    background: var(--bg);
-    color: var(--fontColor);
+  background: var(--bg);
+  color: var(--fontColor);
 
-    /*font styling*/
-    margin: auto;
-    /*border: 3px solid var(--fontColor);*/
-    display: flex;
+  /*font styling*/
+  margin: auto;
+  /*border: 3px solid var(--fontColor);*/
+  display: flex;
 }
 
 .btn {
-    top: 20px;
-    left: 250px;
-    height: 30px;
-    width: 100%;
-    border: none;
-    border-radius: 2rem;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
+  top: 20px;
+  left: 250px;
+  height: 30px;
+  width: 100%;
+  border: none;
+  border-radius: 2rem;
+  color: var(--btnFontColor);
+  background-color: var(--btnBg);
 }
 
 .btn:hover {
-    transition: 0.25s;
-    color: var(--fontColor);
-    background-color: var(--middark);
-    cursor: pointer;
+  transition: 0.25s;
+  color: var(--fontColor);
+  background-color: var(--middark);
+  cursor: pointer;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .list {
-    list-style: square;
+  list-style: square;
 }
 
 .light-theme {
-    --bg: var(--background);
-    --fontColor: var(--black);
-    --btnBg: var(--buttonback);
-    --btnFontColor: var(--black);
-    --postMidbg: var(--midlight);
-    --sidebar: var(--middark);
-    --title: var(--buttonback);
-    --header: var(--midlight);
-    transition: 0.25s;
+  --bg: var(--background);
+  --fontColor: var(--black);
+  --btnBg: var(--buttonback);
+  --btnFontColor: var(--black);
+  --postMidbg: var(--midlight);
+  --sidebar: var(--middark);
+  --title: var(--buttonback);
+  --header: var(--midlight);
+  transition: 0.25s;
 
 }
 
 .dark-theme {
-    --bg: var(--darkbg);
-    --fontColor: var(--background);
-    --btnBg: var(--black);
-    --btnFontColor: var(--buttonback);
-    --postMidbg: var(--middark);
-    --sidebar: var(--middark);
-    --title: var(--buttonback);
-    --header: var(--almostblack);
-    transition: 0.25s;
+  --bg: var(--darkbg);
+  --fontColor: var(--background);
+  --btnBg: var(--black);
+  --btnFontColor: var(--buttonback);
+  --postMidbg: var(--middark);
+  --sidebar: var(--middark);
+  --title: var(--buttonback);
+  --header: var(--almostblack);
+  transition: 0.25s;
 }
 
 #right {
-    background: var(--sidebar);
-    float: right;
-    width: 15%;
-    /*border: 3px solid var(--fontColor);*/
+  background: var(--sidebar);
+  float: right;
+  width: 15%;
+  /*border: 3px solid var(--fontColor);*/
 }
 
 #left {
-    background: var(--sidebar);
-    float: left;
-    width: 15%;
-    /*border: 3px solid var(--fontColor);*/
+  background: var(--sidebar);
+  float: left;
+  width: 15%;
+  /*border: 3px solid var(--fontColor);*/
 
 }
 
 #mid {
-    width: 85%;
-    /*border: 3px solid var(--fontColor);*/
-    height: 92vh;
+  width: 85%;
+  /*border: 3px solid var(--fontColor);*/
+  height: 92vh;
 }
 
 #top {
-    background: var(--header);
-    color: var(--fontColor);
-    margin: auto;
-    /*border: 3px solid var(--fontColor);*/
-    display: flex;
-    position: relative;
-    height: 8vh;
+  background: var(--header);
+  color: var(--fontColor);
+  margin: auto;
+  /*border: 3px solid var(--fontColor);*/
+  display: flex;
+  position: relative;
+  height: 8vh;
 }
 
 #tleft {
-    display: flex;
-    align-items: center;
-    float: left;
-    width: 15%;
-    color: var(--title)
-    /*border: 3px solid var(--fontColor);*/
+  display: flex;
+  align-items: center;
+  float: left;
+  width: 15%;
+  color: var(--title)
+  /*border: 3px solid var(--fontColor);*/
 }
 
 #tleft h1 {
@@ -131,19 +131,19 @@ li {
 }
 
 #tmid {
-    width: 85%;
-    /*border: 3px solid var(--fontColor);*/
+  width: 85%;
+  /*border: 3px solid var(--fontColor);*/
 }
 
 #tright {
-    float: right;
-    width: 15%;
-    /*border: 3px solid var(--fontColor);*/
-    position: relative;
+  float: right;
+  width: 15%;
+  /*border: 3px solid var(--fontColor);*/
+  position: relative;
 }
 
 .themeButton {
-    max-width: 10%;
+  max-width: 10%;
 }
 
 .settingContainer {

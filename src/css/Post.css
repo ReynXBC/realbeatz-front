@@ -1,165 +1,166 @@
 .postContainer {
-    /*border: black solid thin;*/
-    padding: 1%;
-    max-width: 100%;
-    background: var(--buttonback);
-    border-radius: 2rem;
-    margin: 10px;
+  /*border: black solid thin;*/
+  padding: 1%;
+  max-width: 100%;
+  background: var(--buttonback);
+  border-radius: 2rem;
+  margin: 10px;
 }
 
 .postHeaderDiv {
-    /*border: blue solid thin;*/
-    display: flex;
-    justify-content: space-between;
-    background: var(--postMidbg);
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
+  /*border: blue solid thin;*/
+  display: flex;
+  justify-content: space-between;
+  background: var(--postMidbg);
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
 }
 
 .postContentDiv {
-    /*border: blue solid thin;*/
+  /*border: blue solid thin;*/
 
 }
 
 .postContentDiv p {
-    border-top: black solid thin;
-    min-height: 20px;
-    min-width: 70%;
-    padding: 10px;
-    /*border-radius: 25px;*/
+  border-top: black solid thin;
+  min-height: 20px;
+  min-width: 70%;
+  padding: 10px;
+  /*border-radius: 25px;*/
 
-    background: var(--postMidbg);
-    font-size: large;
+  background: var(--postMidbg);
+  font-size: large;
 }
 
 .postProfileDiv span {
-    position: relative;
-    top: -20px;
-    margin-left: 15px;
-    font-size: large;
+  position: relative;
+  top: -20px;
+  margin-left: 15px;
+  font-size: large;
 }
 
 .postProfileDiv img {
-    border-radius: 50%;
-    margin-left: 2px;
-    margin-top: 2px;
-    width: 60px;
-    height: 60px;
-    border: solid thick;
-    border-color: var(--buttonback);
+  border-radius: 50%;
+  margin-left: 2px;
+  margin-top: 2px;
+  width: 60px;
+  height: 60px;
+  border: solid thick;
+  border-color: var(--buttonback);
 }
 
 .postFooterDiv {
-    /*border: blue solid thin;*/
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2rem;
-    background: var(--postMidbg);
-    border-bottom-left-radius: 25px;
-    border-top: black solid thin;
+  /*border: blue solid thin;*/
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: var(--postMidbg);
+  border-bottom-left-radius: 25px;
+  border-top: black solid thin;
 }
 
 
 .postCommentInputDiv form {
-    display: flex;
-    margin-left: 100px;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*left: 50%;*/
-    /*transform: translate(50%, 50%);*/
+  display: flex;
+  margin-left: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translate(50%, 50%);*/
 }
 
 #postCommentInput {
-    margin: 0;
+  margin: 0;
 }
 
 .postCommentInputDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .postCommentInputDiv input[type="text"] {
-    width: 100%;
-    margin-top: 50px;
+  width: 100%;
+  margin-top: 50px;
 }
 
 .postLikeDiv {
-    display: flex;
-    vertical-align: center;
-    padding: 10px 0 10px 0;
+  display: flex;
+  vertical-align: center;
+  padding: 10px 0 10px 0;
 }
 
 .postCommentDiv {
-    border-top: black solid thin;
-    background: var(--postMidbg);
-    margin-left: 50px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+  border-top: black solid thin;
+  background: var(--postMidbg);
+  margin-left: 50px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 .postCommentDiv p {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
-.postCommentInputDiv button{
-    /*vertical-align: center;
-    display: flex;*/
-    display: flex;
-    justify-content: center;
-    align-items:center;
+.postCommentInputDiv button {
+  /*vertical-align: center;
+  display: flex;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .postTimeStampDiv {
-    margin-right: 15px;
-    margin-top: 5px;
+  margin-right: 15px;
+  margin-top: 5px;
 }
 
 .postEntryDiv {
-    display: flex;
-    background: var(--postMidbg);
-    padding: 1%;
-    max-width: 100%;
-    border-radius: 2rem;
-    margin: 1%;
-    justify-content: center;
+  display: flex;
+  background: var(--postMidbg);
+  padding: 1%;
+  max-width: 100%;
+  border-radius: 2rem;
+  margin: 1%;
+  justify-content: center;
 
 }
 
 .postEntryDiv form {
-    display: flex;
-    gap: 1.5rem;
-    width: 100%;
-    justify-content: center;
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  justify-content: center;
 }
 
 .postEntryDiv form textarea {
-    width: 70%;
-    height: 100%;
-    resize: none;
+  width: 70%;
+  height: 100%;
+  resize: none;
 }
 
 .postEntryDiv button {
-    width: 100px;
+  width: 100px;
 }
 
 .postEntryDiv label {
-    margin-right: 1.5rem;
-    font-size: large;
+  margin-right: 1.5rem;
+  font-size: large;
 }
 
-#postEntryForm input{
-    height: 80%;
+#postEntryForm input {
+  height: 80%;
 }
 
 .postEntryContainer {
-    background: var(--buttonback);
-    border-radius: 2rem;
-    padding: 0.5rem;
+  background: var(--buttonback);
+  border-radius: 2rem;
+  padding: 0.5rem;
 }
 
 .postDiv {
-    margin: 1rem;
+  margin: 1rem;
 }

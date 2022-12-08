@@ -1,28 +1,28 @@
-.profilePicture img{
-    border-radius: 50%;
-    margin: 1rem;
-    width: 200px;
-    height: 200px;
-    border: solid thick;
-    border-color: var(--buttonback)
+.profilePicture img {
+  border-radius: 50%;
+  margin: 1rem;
+  width: 200px;
+  height: 200px;
+  border: solid thick;
+  border-color: var(--buttonback)
 }
 
 .profilePicture {
-    max-width: 20%;
-    height: auto;
+  max-width: 20%;
+  height: auto;
 
 
 }
 
 .profileContainer {
-    display: flex;
+  display: flex;
 }
 
 .profileContent {
-    font-size: large;
-    margin: 2rem;
+  font-size: large;
+  margin: 2rem;
 }
 
 .profileContent p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }

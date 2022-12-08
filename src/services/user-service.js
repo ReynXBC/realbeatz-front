@@ -2,6 +2,8 @@ import {API_URL} from "../config/api-config";
 
 const GET_USER_URL = API_URL + "/user";
 const GET_ALL_FRIENDS_URL = API_URL + "/user/friends";
+
+const GET_ALL_USERS_URL = API_URL + "/user/all";
 const GET_PROFILE_PIC_URL = API_URL + "/user/profile-pictures"
 
 
@@ -33,9 +35,14 @@ async function fetchUserDetails(username) {
 async function fetchAllFriends() {
   return await fetch(GET_ALL_FRIENDS_URL, {
     headers: authHeader
-  }).then(response => response.json())
+  }).then(response => response.json());
+}
+
+async function fetchAllUsers() {
+  return await fetch(GET_ALL_USERS_URL, {
+    headers: authHeader
+  }).then(response => response.json());
 }
 
 
-
-export {fetchUserDetails,fetchAllFriends, GET_PROFILE_PIC_URL};
+export {fetchUserDetails, fetchAllFriends, fetchAllUsers, GET_PROFILE_PIC_URL};

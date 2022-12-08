@@ -1,22 +1,23 @@
 .navbutton {
-    background: var(--sidebar);
-    height: 60px;
-    width: 100%;
-    color: var(--buttonback);
-    border: none;
-    font-size: large;
+  background: var(--sidebar);
+  height: 60px;
+  width: 100%;
+  color: var(--buttonback);
+  border: none;
+  font-size: large;
 }
 
 .navbutton:hover {
-    transition: 0.25s;
-    color: var(--fontColor);
-    background-color: var(--darkbg);
-    cursor: pointer;
+  transition: 0.25s;
+  color: var(--fontColor);
+  background-color: var(--darkbg);
+  cursor: pointer;
 }
 
 .menubottom {
 
 }
+
 #Navbar {
 
 }

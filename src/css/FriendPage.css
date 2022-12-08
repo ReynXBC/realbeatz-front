@@ -1,9 +1,9 @@
 .friendPageCardImageDiv img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    border: solid thick;
-    border-color: var(--buttonback)
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: solid thick;
+  border-color: var(--buttonback)
 }
 
 .friendPageCardDetailsDiv {
@@ -11,19 +11,19 @@
 }
 
 .friendPageCardDetailsDiv p {
-    text-align: center;
+  text-align: center;
 }
 
 .friendPageCard {
-    padding: 10px;
-    background: var(--middark);
-    border-radius: 2rem;
-    margin: 0.5rem;
+  padding: 10px;
+  background: var(--middark);
+  border-radius: 2rem;
+  margin: 0.5rem;
 }
 
 #friendPageDiv {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
