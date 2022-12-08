@@ -35,7 +35,7 @@ const SignupForm = () => {
         <div id={'out'} className={"dark-theme"}>
             <h2>Signup</h2><br/>
             <form onSubmit={handleSubmit}>
-                <label>First and Last Name:   </label>
+                <label>First and Last Name: </label>
                 <input
                     type="text"
                     name="First Name"
@@ -48,27 +48,27 @@ const SignupForm = () => {
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                 /><br/>
-                <label>Date of Birth:   </label>
+                <label>Date of Birth: </label>
                 <input
                     type="date"
                     name="dob"
                     value={dob}
                     onChange={(e) => setDob(e.target.value)}
                 /><br/>
-                <label>Username:   </label>
+                <label>Username: </label>
                 <input
                     type="text"
                     name="Username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                 /><br/>
-                <label>Password:   </label>
+                <label>Password: </label>
                 <input
                     type="password"
                     name="Password"
                     onChange={(e) => setPassword(e.target.value)}
                 /><br/>
-                <label>Confirm Password:   </label>
+                <label>Confirm Password: </label>
                 <input
                     type="password"
                     name="Confirm Password"

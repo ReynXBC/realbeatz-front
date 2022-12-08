@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import {authLogin} from "../../services/auth-service";
 import {storeTokens} from "../../security/security";
 
@@ -11,16 +11,16 @@ const LoginForm = ({auth}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         authLogin(username, password)
-          .then(tokens => {
-              console.log("tokens: ", tokens);
-              auth.handleAuthenticationSuccess(username);
-              auth.setTokens(tokens);
-              storeTokens(tokens);
-              navigate("/posts");
-          })
-          .catch(error => {
-              console.log("error:", error);
-          })
+            .then(tokens => {
+                console.log("tokens: ", tokens);
+                auth.handleAuthenticationSuccess(username);
+                auth.setTokens(tokens);
+                storeTokens(tokens);
+                navigate("/posts");
+            })
+            .catch(error => {
+                console.log("error:", error);
+            })
     };
 
     function signup() {
@@ -43,7 +43,7 @@ const LoginForm = ({auth}) => {
                         name="Password"
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <input className="btn" type="submit" value="Login" />
+                    <input className="btn" type="submit" value="Login"/>
                 </form>
             </div>
             <div>
