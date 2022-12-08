@@ -34,7 +34,10 @@ export default function Post({postDetails}) {
       <div className={"postContentDiv"}>
         <p><span>{postDetails.content}</span></p>
       </div>
-      <div className={'postFooterDiv'}>
+      <div className={'postFooterDiv'}
+            style={postDetails.comments.length > 0
+              ? {}
+              : {borderBottomRightRadius: "2rem"}}>
         <div className={'postLikeDiv'}>
           <button className={"btn"}>Like</button>
         </div>

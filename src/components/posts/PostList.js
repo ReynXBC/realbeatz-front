@@ -19,10 +19,10 @@ export default function PostList({postList, handlePost}) {
         <div className="postEntryDiv">
           <label>Post Here!: </label>
           <form id="postEntryForm" onSubmit={handlePost}>
-                        <textarea
-                          id="postCommentInput"
-                          name="postContent" onChange={handlePostInputChange}
-                          value={postInput}/>
+              <textarea
+                id="postCommentInput"
+                name="postContent" onChange={handlePostInputChange}
+                value={postInput}/>
             <button className="btn">Post</button>
           </form>
         </div>
