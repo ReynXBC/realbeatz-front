@@ -6,6 +6,7 @@ const GET_ALL_FRIENDS_URL = API_URL + "/user/friends";
 const GET_ALL_USERS_URL = API_URL + "/user/all";
 
 const ADD_NEW_FRIEND_URL = API_URL + "/user/friends/request"
+const GET_ALL_FRIEND_REQUESTS_URL = API_URL + "/user/friends/request/all"
 const GET_PROFILE_PIC_URL = API_URL + "/user/profile-pictures"
 
 
@@ -61,5 +62,13 @@ async function addNewFriend(friendId, message="") {
   });
 }
 
+async function fetchAllFriendRequestsReceived() {
+  console.log("Fetching all friend requests received...");
+  return await fetch(GET_ALL_FRIEND_REQUESTS_URL, {
+    headers: authHeader
+  }).then(response => response.json());
+}
 
-export {fetchUserDetails, fetchAllFriends, fetchAllUsers, addNewFriend,GET_PROFILE_PIC_URL};
+
+export {fetchUserDetails, fetchAllFriends,
+  fetchAllUsers, addNewFriend, fetchAllFriendRequestsReceived, GET_PROFILE_PIC_URL};

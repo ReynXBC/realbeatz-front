@@ -1,6 +1,6 @@
 import NotificationCard from "./NotificationCard";
 
-export default function NotificationPage(requests) {
+export default function NotificationPage({requests}) {
   return (
     <div className={"friendPageDiv"}>
       {
