@@ -3,8 +3,11 @@ import {compileUserDetails, fetchUserFromStorage} from "../../utils/user-utils";
 
 export default function Profile() {
 
+  const [user, setUser] = useState(null);
+
   useEffect(() => {
     let user = fetchUserFromStorage();
+    setUser(user);
     let compiledUserDetails = compileUserDetails(user);
     setUserDetails(compiledUserDetails);
   })
