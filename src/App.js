@@ -68,12 +68,12 @@ function App() {
   useEffect(() => {
     // let fetchedPostList = getPosts();
     // setPostList(fetchedPostList);
-    // fetchAllUsers()
-    //   .then(users => {
-    //     console.log("users fetched: ");
-    //     console.log(users);
-    //     setUserList(users);
-    //   });
+    fetchAllUsers()
+      .then(users => {
+        console.log("users fetched: ");
+        console.log(users);
+        setUserList(users);
+      });
 
     console.log("fetching notifications")
     fetchAllFriendRequestsReceived()
