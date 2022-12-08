@@ -23,7 +23,7 @@ export default function PostList({postList}) {
               type="text" id="postCommentInput"
               name="postCommentInput" onChange={handlePostInputChange}
               value={postInput}/>
-            <submit className="btn" onClick={handlePost}>Post</submit>
+            <submit className="btn">Post</submit>
           </form>
         </div>
       </div>
