@@ -8,13 +8,15 @@ export default function Profile({user}) {
 
   const [userDetails, setUserDetails] = useState(
       {
-        username: "Juauauan",
-        firstName: "Jalin",
-        lastName: "Hyatt",
-        bio: "I have joined RealBeatz",
-        numOfFriends: 14,
-        joinDate: "11/11/2022",
-        profilePicture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2vVVG2BOns1aicnn0wKmKn3aYtHCcBiysWlpz_c&s"
+          id: '',
+          username: "Juauauan",
+          firstName: "Jalin",
+          lastName: "Hyatt",
+          bio: "I have joined RealBeatz",
+          dob: "",
+          age: 0,
+          registrationDate: "11/11/2022",
+          profilePicture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2vVVG2BOns1aicnn0wKmKn3aYtHCcBiysWlpz_c&s"
       }
   );
   return (
@@ -26,8 +28,7 @@ export default function Profile({user}) {
           <p>Username: {userDetails.username}</p>
           <p>Name: {userDetails.firstName} {userDetails.lastName}</p>
           <p>Bio: {userDetails.bio}</p>
-          <p>Friends: {userDetails.numOfFriends}</p>
-          <p>Joined On {userDetails.joinDate}</p>
+          <p>Joined On {userDetails.registrationDate}</p>
 
         </div>
       </div>
