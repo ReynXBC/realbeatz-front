@@ -22,10 +22,11 @@ body {
 }
 
 #container {
-  min-height: 100vh;
+  min-height: auto;
 }
 
 #out {
+  min-height: 92vh;
   background: var(--bg);
   color: var(--fontColor);
 
@@ -148,4 +149,28 @@ li {
 
 .settingContainer {
 
+}
+
+.loginDiv {
+  display: flex;
+  justify-content: center ;
+  background: var(--buttonback);
+  padding: 1%;
+  border-radius: 2rem;
+  font-size: large;
+}
+
+.loginDiv form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#loginContainer {
+  display: flex;
+  background: var(--darkbg);
+  justify-content: center;
+  align-items: center;
+  min-height: 92vh;
+  min-width: 100vh;
 }
