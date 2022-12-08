@@ -80,7 +80,7 @@
 }
 
 .postCommentInputDiv input[type="text"] {
-    width: 70%;
+    width: 100%;
     margin-top: 50px;
 }
 

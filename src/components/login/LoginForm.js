@@ -16,24 +16,34 @@ const LoginForm = () => {
         }
     }
 
+    function signup() {
+        navigate("/signup")
+    }
+
     return (
         <div id={'out'} className={"dark-theme"}>
-            <p>Login</p><br/>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                /><br/>
-                <input
-                    type="password"
-                    name="Password"
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <input type="submit" value="Login" />
-            </form>
+            <div>
+                <p>Login</p><br/>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        name="Username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    /><br/>
+                    <input
+                        type="password"
+                        name="Password"
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <input className="btn" type="submit" value="Login" />
+                </form>
+            </div>
+            <div>
+                <button className={"btn"} onClick={signup}>Signup</button>
+            </div>
         </div>
+
     )
 };
 export default LoginForm;
