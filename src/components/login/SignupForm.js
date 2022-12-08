@@ -32,59 +32,61 @@ const SignupForm = () => {
   }
 
   return (
-    <div id={'out'} className={"dark-theme"}>
-      <h2>Signup</h2><br/>
-      <form onSubmit={handleSubmit}>
-        <label>First and Last Name: </label>
-        <input
-          type="text"
-          name="First Name"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-        />
-        <input
-          type="text"
-          name="Last Name"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-        /><br/>
-        <label>Date of Birth: </label>
-        <input
-          type="date"
-          name="dob"
-          value={dob}
-          onChange={(e) => setDob(e.target.value)}
-        /><br/>
-        <label>Username: </label>
-        <input
-          type="text"
-          name="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        /><br/>
-        <label>Password: </label>
-        <input
-          type="password"
-          name="Password"
-          onChange={(e) => setPassword(e.target.value)}
-        /><br/>
-        <label>Confirm Password: </label>
-        <input
-          type="password"
-          name="Confirm Password"
-          onChange={(e) => setPassword(e.target.value)}
-        /> <br/>
-        <textarea
-          type="text"
-          name="Bio"
-          value={bio}
-          onChange={(e) => setBio(e.target.value)}
-        /><br/>
-        <input
-          type={"file"} onChange={(e) => setProfilePicture(e.target.files[0])}
-        /> <br/>
-        <input type="submit" value="Login"/>
-      </form>
+    <div id={"loginContainer"} className={"dark-theme"}>
+      <div className={"loginDiv"}>
+        <h2>Signup</h2><br/>
+        <form onSubmit={handleSubmit}>
+          <label>First and Last Name: </label>
+          <input
+            type="text"
+            name="First Name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+          <input
+            type="text"
+            name="Last Name"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          /><br/>
+          <label>Date of Birth: </label>
+          <input
+            type="date"
+            name="dob"
+            value={dob}
+            onChange={(e) => setDob(e.target.value)}
+          /><br/>
+          <label>Username: </label>
+          <input
+            type="text"
+            name="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          /><br/>
+          <label>Password: </label>
+          <input
+            type="password"
+            name="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          /><br/>
+          <label>Confirm Password: </label>
+          <input
+            type="password"
+            name="Confirm Password"
+            onChange={(e) => setPassword(e.target.value)}
+          /> <br/>
+          <textarea
+            type="text"
+            name="Bio"
+            value={bio}
+            onChange={(e) => setBio(e.target.value)}
+          /><br/>
+          <input
+            type={"file"} onChange={(e) => setProfilePicture(e.target.files[0])}
+          /> <br/>
+          <input className="btn" type="submit" value="Register"/>
+        </form>
+      </div>
     </div>
   )
 };

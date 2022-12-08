@@ -28,16 +28,15 @@ const LoginForm = ({auth}) => {
   }
 
   return (
-    <div id={'out'} className={"dark-theme"}>
-      <div>
-        <p>Login</p><br/>
+    <div id={'loginContainer'} className={"dark-theme"}>
+      <div className={"loginDiv"}>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             name="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-          /><br/>
+          />
           <input
             type="password"
             name="Password"
@@ -45,12 +44,9 @@ const LoginForm = ({auth}) => {
           />
           <input className="btn" type="submit" value="Login"/>
         </form>
-      </div>
-      <div>
         <button className={"btn"} onClick={signup}>Signup</button>
       </div>
     </div>
-
   )
 };
 export default LoginForm;
