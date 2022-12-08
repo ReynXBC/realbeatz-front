@@ -18,7 +18,7 @@ import Profile from "./components/profile/Profile";
 import Settings from "./components/settings/Settings";
 import SignupForm from "./components/login/SignupForm";
 import {fetchAllFriendRequestsReceived, fetchAllUsers} from "./services/user-service";
-import NotificationPage from "./notifications/NotifcationPage";
+import NotificationPage from "./components/notifications/NotifcationPage";
 
 function App() {
   const [theme, setTheme] = useState({className: 'dark-theme', name: 'Dark'})

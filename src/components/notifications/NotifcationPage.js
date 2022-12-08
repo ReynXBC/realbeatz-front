@@ -1,6 +1,6 @@
 import NotificationCard from "./NotificationCard";
 import {useEffect} from "react";
-import {fetchAllFriendRequestsReceived} from "../services/user-service";
+import {fetchAllFriendRequestsReceived} from "../../services/user-service";
 
 export default function NotificationPage({requests}) {
 

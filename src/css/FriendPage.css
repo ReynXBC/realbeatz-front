@@ -3,7 +3,9 @@
   width: 150px;
   height: 150px;
   border: solid thick;
-  border-color: var(--buttonback)
+  border-color: var(--buttonback);
+  display: flex;
+  justify-content: center;
 }
 
 .friendPageCardDetailsDiv {
@@ -26,4 +28,8 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+}
+
+.bold {
+  font-weight: bold;
 }
