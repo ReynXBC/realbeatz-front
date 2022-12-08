@@ -16,6 +16,7 @@ import {getPosts} from "./services/post-service";
 import FriendPage from "./components/friends/FriendPage";
 import Profile from "./components/profile/Profile";
 import Settings from "./components/settings/Settings";
+import SignupForm from "./components/login/SignupForm";
 
 function App() {
   const [theme, setTheme] = useState({className: 'dark-theme', name: 'Dark'})
@@ -59,6 +60,7 @@ function App() {
           <Route path="settings" element={<Settings postList={postList}/>}/>
         </Route>
         <Route path="login" element={<LoginForm auth={auth}/>}/>
+        <Route path="signup" element={<SignupForm />}/>
         <Route path="test" element={<TestPage/>}/>
       </Routes>
     </>
