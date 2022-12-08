@@ -5,12 +5,8 @@ export default function SideNavbar() {
     <div id={"SideNavbar"}>
       <div>
         <SideNavbarButton name={"Posts"} to={"posts"}/>
-<<<<<<< HEAD
-        <SideNavbarButton name={"Friends"} to={"friends"}/>
-=======
         <SideNavbarButton name={"Discover"} to={"friends"}/>
         <SideNavbarButton name={"Notifications"} to={"notifications"}/>
->>>>>>> 33857aca1e96148c54347ae73e61740a5a6b9b68
       </div>
       <div>
         <SideNavbarButton name={"Profile"} to={"profile"}/>
