@@ -1,9 +1,10 @@
 import React from "react";
-import {GET_PROFILE_PIC_URL} from "../../services/user-service";
+import {confirmFriendRequest, GET_PROFILE_PIC_URL} from "../../services/user-service";
 
 export default function NotificationCard({request}) {
   function acceptFriend(id) {
-    //send to server with magic
+    confirmFriendRequest(id)
+      .catch(error => console.log(error));
   }
 
   function refuseFriend(id) {
@@ -16,13 +17,13 @@ export default function NotificationCard({request}) {
     return (
       <div key={request.requesterName} className={'friendPageCard'}>
         <div className="friendPageCardImageDiv">
-          <img src={profilePictureURL}/>
+          <img src={profilePictureURL} alt="Profile picture"/>
         </div>
         <div className="friendPageCardDetailsDiv">
           <p><span className="bold">{request.requesterName}</span></p>
           <p>wants to be your friend!</p>
-          <button className={'btn'} onClick={acceptFriend(request.id)}>Accept</button>
-          <button className={'btn'} onClick={refuseFriend(request.id)}>Refuse</button>
+          <button className={'btn'} onClick={acceptFriend(request.requesterId)}>Accept</button>
+          <button className={'btn'} onClick={refuseFriend(request.requesterId)}>Refuse</button>
         </div>
       </div>
     );

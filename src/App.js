@@ -66,8 +66,6 @@ function App() {
   }
 
   useEffect(() => {
-    // let fetchedPostList = getPosts();
-    // setPostList(fetchedPostList);
     fetchAllUsers()
       .then(users => {
         console.log("users fetched: ");

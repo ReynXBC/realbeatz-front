@@ -1,4 +1,5 @@
 import {API_URL} from "../config/api-config";
+import {logDOM} from "@testing-library/react";
 
 const GET_USER_URL = API_URL + "/user";
 const GET_ALL_FRIENDS_URL = API_URL + "/user/friends";
@@ -9,6 +10,9 @@ const ADD_NEW_FRIEND_URL = API_URL + "/user/friends/request";
 const GET_ALL_FRIEND_REQUESTS_URL = API_URL + "/user/friends/request/all";
 const GET_ALL_RELATED_POST_URL = API_URL + "/post/get-all-related";
 const CREATE_NEW_POST_URL = API_URL + "/post/create";
+
+const CONFIRM_FRIEND_REQUEST_URL = API_URL + "/user/friends/request/confirm";
+const REFUSE_FRIEND_REQUEST_URL = API_URL + "/user/friends/request/refuse";
 const GET_PROFILE_PIC_URL = API_URL + "/user/profile-pictures";
 
 
@@ -94,7 +98,21 @@ async function createNewPost(content) {
   }).then(response => response.json());
 }
 
+async function confirmFriendRequest(requesterId) {
+  console.log("Confirming friend request...")
+  return await fetch(CONFIRM_FRIEND_REQUEST_URL, {
+    method: "post",
+    headers: {
+      "Authorization": authHeader["Authorization"],
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      requesterId: requesterId
+    })
+  });
+}
 
 export {fetchUserDetails, fetchAllFriends,
   fetchAllUsers, addNewFriend, fetchAllFriendRequestsReceived,
-  fetchAllRelatedPosts,createNewPost, GET_PROFILE_PIC_URL};
+  fetchAllRelatedPosts,createNewPost, confirmFriendRequest,
+  GET_PROFILE_PIC_URL};
