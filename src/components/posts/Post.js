@@ -39,7 +39,7 @@ export default function Post({postDetails}) {
         </div>
         <div className={"postCommentInputDiv"}>
           <form id="postCommentForm" onSubmit={handlePostComment}>
-            <input
+            <textarea
               type="text" id="postCommentInput"
               name="postCommentInput" onChange={handleCommentInputChange}
               value={commentInput}/>
