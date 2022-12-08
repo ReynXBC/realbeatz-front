@@ -13,7 +13,6 @@ const LoginForm = ({auth}) => {
         authLogin(username, password)
           .then(tokens => {
               console.log("tokens: ", tokens);
-              alert("Login successful");
               auth.handleAuthenticationSuccess();
               auth.setTokens(tokens);
               storeTokens(tokens);
