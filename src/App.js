@@ -70,6 +70,7 @@ function App() {
         setUserList(users);
       });
 
+    console.log("fetching notifications")
     fetchAllFriendRequestsReceived()
       .then(requests => {
         console.log("friend requests received");

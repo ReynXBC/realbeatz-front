@@ -42,7 +42,7 @@ async function fetchAllFriends() {
 }
 
 async function fetchAllUsers() {
-  return await fetch(GET_ALL_USERS_URL, {
+  return fetch(GET_ALL_USERS_URL, {
     headers: authHeader
   }).then(response => response.json());
 }
@@ -64,7 +64,7 @@ async function addNewFriend(friendId, message="") {
 
 async function fetchAllFriendRequestsReceived() {
   console.log("Fetching all friend requests received...");
-  return await fetch(GET_ALL_FRIEND_REQUESTS_URL, {
+  return fetch(GET_ALL_FRIEND_REQUESTS_URL, {
     headers: authHeader
   }).then(response => response.json());
 }
