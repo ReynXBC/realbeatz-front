@@ -3,9 +3,19 @@ import SideNavbar from "./side-nav/SideNavbar";
 import FriendList from "./friendlist/FriendsList";
 import {Outlet} from "react-router-dom";
 import {useAuthenticationCheck} from "../security/security";
+import {fetchUserDetails} from "../services/user-service";
 
-const Dashboard = ({isAuthenticated, theme}) => {
+const Dashboard = ({isAuthenticated, theme, username, setUser}) => {
   useAuthenticationCheck(isAuthenticated);
+
+  useEffect(() => {
+    fetchUserDetails(username)
+      .then(user => {
+        console.log(user)
+        setUser(user);
+      })
+      .catch(error => console.log(error));
+  }, [])
 
   function fetchPosts() {
     // fetch()

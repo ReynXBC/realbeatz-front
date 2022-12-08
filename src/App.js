@@ -29,15 +29,31 @@ function App() {
     refreshToken: null
   });
 
-  function handleAuthenticationSuccess() {
+  // User information
+  const [username, setUsername] = useState("");
+  const [user, setUser] = useState({
+    id: null,
+    username: null,
+    registrationDate: null,
+    profile: null,
+    friends: null,
+    groupChats: null,
+    posts: null,
+    friendRequestsSent: null,
+    friendRequestsReceived: null
+  });
+
+
+  function handleAuthenticationSuccess(username) {
     setIsAuthenticated(true);
+    setUsername(username);
   }
 
   const auth = {
     isAuthenticated: isAuthenticated,
     handleAuthenticationSuccess: handleAuthenticationSuccess,
     tokens: tokens,
-    setTokens: setTokens
+    setTokens: setTokens,
   }
 
   useEffect(() => {
@@ -52,11 +68,11 @@ function App() {
         <Header theme={theme} setTheme={setTheme}/>
       </div>
       <Routes>
-        <Route index element={<Dashboard isAuthenticated={isAuthenticated} theme={theme}/>}/>
+        <Route index element={<Dashboard isAuthenticated={isAuthenticated} theme={theme} username={username} setUser={setUser}/>}/>
         <Route path="/" element={<Dashboard isAuthenticated={isAuthenticated} theme={theme}/>}>
           <Route path="posts" element={<PostList postList={postList}/>}/>
           <Route path="friends" element={<FriendPage  />}/>
-          <Route path="profile" element={<Profile  postList={postList}/>}/>
+          <Route path="profile" element={<Profile  />}/>
           <Route path="settings" element={<Settings postList={postList}/>}/>
         </Route>
         <Route path="login" element={<LoginForm auth={auth}/>}/>

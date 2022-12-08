@@ -1,6 +1,11 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
-export default function Profile() {
+export default function Profile({user}) {
+
+  useEffect(() => {
+    setUserDetails(user);
+  })
+
   const [userDetails, setUserDetails] = useState(
       {
         username: "Juauauan",
@@ -15,7 +20,7 @@ export default function Profile() {
   return (
       <div className={"profileContainer"}>
         <div className={"profilePicture"} >
-          <img src={userDetails.profilePicture}></img>
+          <img src={userDetails.profilePicture} alt={"Profile Picture"}></img>
         </div>
         <div className={"profileContent"}>
           <p>Username: {userDetails.username}</p>

@@ -13,7 +13,7 @@ const LoginForm = ({auth}) => {
         authLogin(username, password)
           .then(tokens => {
               console.log("tokens: ", tokens);
-              auth.handleAuthenticationSuccess();
+              auth.handleAuthenticationSuccess(username);
               auth.setTokens(tokens);
               storeTokens(tokens);
               navigate("/posts");
