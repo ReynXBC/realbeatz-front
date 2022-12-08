@@ -17,7 +17,7 @@ import FriendPage from "./components/friends/FriendPage";
 import Profile from "./components/profile/Profile";
 import Settings from "./components/settings/Settings";
 import SignupForm from "./components/login/SignupForm";
-import {fetchAllFriendRequestsReceived, fetchAllUsers} from "./services/user-service";
+import {fetchAllFriendRequestsReceived, fetchAllRelatedPosts, fetchAllUsers} from "./services/user-service";
 import NotificationPage from "./notifications/NotifcationPage";
 
 function App() {
@@ -61,14 +61,14 @@ function App() {
   }
 
   useEffect(() => {
-    let fetchedPostList = getPosts();
-    setPostList(fetchedPostList);
-    fetchAllUsers()
-      .then(users => {
-        console.log("users fetched: ");
-        console.log(users);
-        setUserList(users);
-      });
+    // let fetchedPostList = getPosts();
+    // setPostList(fetchedPostList);
+    // fetchAllUsers()
+    //   .then(users => {
+    //     console.log("users fetched: ");
+    //     console.log(users);
+    //     setUserList(users);
+    //   });
 
     console.log("fetching notifications")
     fetchAllFriendRequestsReceived()
@@ -76,6 +76,13 @@ function App() {
         console.log("friend requests received");
         console.log(requests);
         setFriendRequestList(requests);
+      })
+
+    fetchAllRelatedPosts()
+      .then(posts => {
+        console.log("posts received")
+        console.log(posts)
+        setPostList(posts);
       })
   }, [])
 

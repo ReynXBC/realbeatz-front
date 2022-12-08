@@ -5,9 +5,10 @@ const GET_ALL_FRIENDS_URL = API_URL + "/user/friends";
 
 const GET_ALL_USERS_URL = API_URL + "/user/all";
 
-const ADD_NEW_FRIEND_URL = API_URL + "/user/friends/request"
-const GET_ALL_FRIEND_REQUESTS_URL = API_URL + "/user/friends/request/all"
-const GET_PROFILE_PIC_URL = API_URL + "/user/profile-pictures"
+const ADD_NEW_FRIEND_URL = API_URL + "/user/friends/request";
+const GET_ALL_FRIEND_REQUESTS_URL = API_URL + "/user/friends/request/all";
+const GET_ALL_RELATED_POST_URL = API_URL + "/post/get-all-related";
+const GET_PROFILE_PIC_URL = API_URL + "/user/profile-pictures";
 
 
 let accessToken = null;
@@ -69,6 +70,14 @@ async function fetchAllFriendRequestsReceived() {
   }).then(response => response.json());
 }
 
+async function fetchAllRelatedPosts() {
+  console.log("Fetching all posts needed to display...")
+  return await fetch(GET_ALL_RELATED_POST_URL, {
+    headers: authHeader
+  }).then(response => response.json());
+}
+
 
 export {fetchUserDetails, fetchAllFriends,
-  fetchAllUsers, addNewFriend, fetchAllFriendRequestsReceived, GET_PROFILE_PIC_URL};
+  fetchAllUsers, addNewFriend, fetchAllFriendRequestsReceived,
+  fetchAllRelatedPosts, GET_PROFILE_PIC_URL};
