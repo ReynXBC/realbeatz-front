@@ -7,7 +7,7 @@ export default function NotificationPage({requests}) {
         requests.map(request => {
           console.log(request);
           return (
-            <NotificationCard friend={request}/>
+            <NotificationCard request={request}/>
           )
         })
       }
