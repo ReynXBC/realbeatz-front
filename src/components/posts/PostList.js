@@ -18,7 +18,8 @@ export default function PostList({postList}) {
         console.log(value);
         setPostInput(value);
     }
-    return(
+
+    return (
         <div className="postDiv">
             <div className="postEntryContainer">
                 <div className="postEntryDiv">

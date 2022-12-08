@@ -25,7 +25,7 @@ export default function FriendPage() {
                 userList.map(friend => {
                     console.log(friend);
                     return (
-                        <FriendPageCard friend={friend} />
+                        <FriendPageCard friend={friend}/>
                     )
                 })
             }

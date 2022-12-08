@@ -13,7 +13,7 @@ export default function Profile() {
         setUser(fetchedUser);
         let compiledUserDetails = compileUserDetails(fetchedUser);
         setUserDetails(compiledUserDetails);
-    },[])
+    }, [])
 
     const [userDetails, setUserDetails] = useState(
         {
@@ -31,7 +31,8 @@ export default function Profile() {
     return (
         <div className={"profileContainer"}>
             <div className={"profilePicture"}>
-                <img src={GET_PROFILE_PIC_URL+"/"+user.profile.profilePictureFullName} alt={"Profile Picture"}></img>
+                <img src={GET_PROFILE_PIC_URL + "/" + user.profile.profilePictureFullName}
+                     alt={"Profile Picture"}></img>
             </div>
             <div className={"profileContent"}>
                 <p>Username: {userDetails.username}</p>
