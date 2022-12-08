@@ -1,9 +1,10 @@
 import {useState} from "react";
+import {GET_PROFILE_PIC_URL} from "../../services/user-service";
 
 export default function Post({postDetails}) {
   const [commentInput, setCommentInput] = useState();
   console.log(postDetails);
-
+  let profilePicture = GET_PROFILE_PIC_URL + "/" + postDetails.posterProfilePictureFullName
 
   const handlePostComment = (event) => {
     event.preventDefault();
@@ -23,11 +24,11 @@ export default function Post({postDetails}) {
       <div className={"postHeaderDiv"}>
         <div className={"postProfileDiv"}>
           <img
-            src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2vVVG2BOns1aicnn0wKmKn3aYtHCcBiysWlpz_c&s"}/>
-          <span>{postDetails.username}</span>
+            src={profilePicture}/>
+          <span>{postDetails.posterUsername}</span>
         </div>
         <div className={"postTimeStampDiv"}>
-          <span>{postDetails.timeStamp}</span>
+          <span>{postDetails.postTime}</span>
         </div>
       </div>
       <div className={"postContentDiv"}>
