@@ -28,7 +28,6 @@ body {
 #out {
     background: var(--bg);
     color: var(--fontColor);
-    font-family: helvetica;
 
     /*font styling*/
     margin: auto;
@@ -71,6 +70,7 @@ li {
     --sidebar: var(--middark);
     --title: var(--buttonback);
     --header: var(--midlight);
+    transition: 0.25s;
 
 }
 
@@ -82,7 +82,8 @@ li {
     --postMidbg: var(--middark);
     --sidebar: var(--middark);
     --title: var(--buttonback);
-    --header: var(--almostblack)
+    --header: var(--almostblack);
+    transition: 0.25s;
 }
 
 #right {
@@ -109,7 +110,6 @@ li {
 #top {
     background: var(--header);
     color: var(--fontColor);
-    font-family: helvetica;
     margin: auto;
     /*border: 3px solid var(--fontColor);*/
     display: flex;
@@ -142,3 +142,10 @@ li {
     position: relative;
 }
 
+.themeButton {
+    max-width: 10%;
+}
+
+.settingContainer {
+
+}

@@ -73,7 +73,7 @@ function App() {
           <Route path="posts" element={<PostList postList={postList}/>}/>
           <Route path="friends" element={<FriendPage  />}/>
           <Route path="profile" element={<Profile  />}/>
-          <Route path="settings" element={<Settings postList={postList}/>}/>
+          <Route path="settings" element={<Settings theme={theme} setTheme={setTheme}/>}/>
         </Route>
         <Route path="login" element={<LoginForm auth={auth}/>}/>
         <Route path="signup" element={<SignupForm />}/>

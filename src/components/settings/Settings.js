@@ -1,7 +1,6 @@
 import {useState} from "react";
 
 export default function Settings({theme, setTheme}) {
-
     function toggleTheme() {
         if (theme.className === 'light-theme') {
             setTheme({className: 'dark-theme', name: 'Dark'})
@@ -11,6 +10,14 @@ export default function Settings({theme, setTheme}) {
     }
 
     return (
-        <h1>Settings</h1>
+        <div className={"settingContainer"}>
+            <div>
+                <h2>Settings: </h2>
+            </div>
+            <div className={"themeButton"}>
+                <button className={'btn'} onClick={toggleTheme}>{theme.name} Mode</button>
+            </div>
+        </div>
+
     );
 }

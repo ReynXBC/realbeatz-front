@@ -28,7 +28,6 @@ export default function Header({theme, setTheme}) {
                 </div>
                 <div id={'tright'}>
                     <button className={'btn'} onClick={logout}>Logout</button>
-                    <button className={'btn'} onClick={toggleTheme}>{theme.name}</button>
                 </div>
             </div>
         </header>
