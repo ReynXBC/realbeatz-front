@@ -23,6 +23,7 @@ export default function PostList({postList}) {
         <div className="postDiv">
             <div className="postEntryContainer">
                 <div className="postEntryDiv">
+                    <label>Post Here!: </label>
                     <form id="postEntryForm" onSubmit={handlePost}>
                         <textarea
                             type="text" id="postCommentInput"

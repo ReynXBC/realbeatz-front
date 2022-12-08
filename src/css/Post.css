@@ -131,16 +131,23 @@
 .postEntryDiv form {
     display: flex;
     gap: 1.5rem;
+    width: 100%;
+    justify-content: center;
 }
 
 .postEntryDiv form textarea {
-    min-width: 600px;
-    min-height: 100px;
+    width: 70%;
+    height: 100%;
     resize: none;
 }
 
 .postEntryDiv button {
     width: 100px;
+}
+
+.postEntryDiv label {
+    margin-right: 1.5rem;
+    font-size: large;
 }
 
 #postEntryForm input{
