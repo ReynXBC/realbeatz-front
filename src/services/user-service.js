@@ -5,7 +5,7 @@ const GET_ALL_FRIENDS_URL = API_URL + "/user/friends";
 
 const GET_ALL_USERS_URL = API_URL + "/user/all";
 
-const ADD_NEW_FRIEND_URL = API_URL + "/user/friends/add"
+const ADD_NEW_FRIEND_URL = API_URL + "/user/friends/request"
 const GET_PROFILE_PIC_URL = API_URL + "/user/profile-pictures"
 
 

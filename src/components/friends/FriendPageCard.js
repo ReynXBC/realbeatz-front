@@ -7,6 +7,9 @@ export default function FriendPageCard({friend}) {
     //send to server with magic
     addNewFriend(friend.id)
       .then((response) => {
+        response.json()
+      })
+      .then((response) => {
         console.log(
           "Successfully sent friend request to " +
           "user with id: " + friend.id);
