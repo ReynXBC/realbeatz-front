@@ -63,7 +63,11 @@ function App() {
     let fetchedPostList = getPosts();
     setPostList(fetchedPostList);
     fetchAllUsers()
-      .then(users => setUserList(users));
+      .then(users => {
+        console.log("users fetched: ");
+        console.log(users);
+        setUserList(users);
+      });
   }, [])
 
 
