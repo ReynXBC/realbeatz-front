@@ -1,12 +1,11 @@
-import React, {useState} from "react";
-import PostList from "./posts/PostList";
+import React, {useEffect} from "react";
 import SideNavbar from "./side-nav/SideNavbar";
 import FriendList from "./friendlist/FriendsList";
 import {Outlet} from "react-router-dom";
+import {useAuthenticationCheck} from "../security/security";
 
-const Dashboard = ({theme}) => {
-
-
+const Dashboard = ({isAuthenticated, theme}) => {
+  useAuthenticationCheck(isAuthenticated);
 
   function fetchPosts() {
     // fetch()
@@ -19,9 +18,6 @@ const Dashboard = ({theme}) => {
           <SideNavbar/>
         </div>
         <div id={'mid'}>
-          {/*<div>*/}
-          {/*  <PostList postList={postList}/>*/}
-          {/*</div>*/}
           <Outlet/>
         </div>
         <div id={'right'}>

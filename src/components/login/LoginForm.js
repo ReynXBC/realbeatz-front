@@ -1,20 +1,28 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {authLogin} from "../../services/auth-service";
+import {storeTokens} from "../../security/security";
 
 
-const LoginForm = () => {
+const LoginForm = ({auth}) => {
     const navigate = useNavigate();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const users = [{ username: "Admin", password: "123456789" }];
     const handleSubmit = (e) => {
         e.preventDefault();
-        const account = users.find((user) => user.username === username);
-        if (account && account.password === password) {
-            localStorage.setItem("authenticated", JSON.stringify({isAuthenticated: true}));
-            navigate("/");
-        }
-    }
+        authLogin(username, password)
+          .then(tokens => {
+              console.log("tokens: ", tokens);
+              alert("Login successful");
+              auth.handleAuthenticationSuccess();
+              auth.setTokens(tokens);
+              storeTokens(tokens);
+              navigate("/posts");
+          })
+          .catch(error => {
+              console.log("error:", error);
+          })
+    };
 
     function signup() {
         navigate("/signup")

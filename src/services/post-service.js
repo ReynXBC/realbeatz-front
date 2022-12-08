@@ -1,6 +1,7 @@
 function getPosts() {
   return [
     {
+      postId: 1000,
       username: "foobar",
       content: "This is not a great website!!!!",
       numOfLikes: 10,
@@ -21,6 +22,7 @@ function getPosts() {
       ]
     },
     {
+      postId: 1001,
       username: "heehoo",
       content: "Dr. Talbott is an easy A",
       numOfLikes: 10,

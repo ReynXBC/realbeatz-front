@@ -1,9 +1,9 @@
-import {API_URL} from "./api-config";
+import {API_URL} from "../config/api-config";
 
 const REGISTER_URL = API_URL + "/auth/register";
 const LOGIN_URL = API_URL + "/auth/login"
 
-async function login(username, password) {
+async function authLogin(username, password) {
   let loginRequestJSON = JSON.stringify({
     username: username,
     password: password
@@ -23,8 +23,7 @@ async function login(username, password) {
       let tokens = extractAccessAndRefreshTokens(response);
       console.log("Tokens: " + tokens);
       return tokens;
-    })
-    .catch(error => console.log(error));
+    });
 }
 
 async function registerNewUser({
@@ -73,4 +72,4 @@ function extractAccessAndRefreshTokens(data) {
   return results;
 }
 
-export {login, registerNewUser};
+export {authLogin, registerNewUser};
