@@ -6,6 +6,8 @@ import {Route, Routes} from "react-router-dom";
 import "./css/Post.css";
 import "./css/Navbar.css";
 import "./css/Friendlist.css";
+import "./css/FriendPage.css";
+import "./css/Profile.css";
 import LoginForm from "./components/login/LoginForm";
 import TestPage from "./components/Testpage";
 import PostList from "./components/posts/PostList";

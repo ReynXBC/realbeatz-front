@@ -2,6 +2,9 @@
     /*border: black solid thin;*/
     padding: 1%;
     max-width: 100%;
+    background: var(--background);
+    border-radius: 2rem;
+
 }
 
 .postHeaderDiv {
@@ -19,13 +22,13 @@
 }
 
 .postContentDiv p {
+    border-top: black solid thin;
     min-height: 20px;
     min-width: 70%;
     padding: 10px;
     /*border-radius: 25px;*/
 
     background: var(--postMidbg);
-    margin-top: 10px;
     font-size: large;
 }
 
@@ -49,9 +52,8 @@
     justify-content: space-between;
     padding: 0 2rem;
     background: var(--postMidbg);
-    border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
-    margin-top: 10px;
+    border-top: black solid thin;
 }
 
 
@@ -78,7 +80,7 @@
 }
 
 .postCommentInputDiv input[type="text"] {
-    width: 70%;
+    width: 100%;
     margin-top: 50px;
 }
 
@@ -89,10 +91,11 @@
 }
 
 .postCommentDiv {
+    border-top: black solid thin;
     background: var(--postMidbg);
     margin-left: 50px;
-    margin-top: 10px;
-    border-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .postCommentDiv p {
@@ -114,13 +117,24 @@
 .postEntryDiv {
     display: flex;
     background: var(--postMidbg);
-    padding: 10px;
+    padding: 1%;
     max-width: 100%;
-    border-radius: 25px;
+    border-radius: 2rem;
     margin: 1%;
     justify-content: right;
+
 }
 
 #postEntryForm input{
     height: 80%;
+}
+
+.postEntryContainer {
+    background: var(--background);
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
+
+.postDiv {
+    margin: 1rem;
 }

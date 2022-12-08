@@ -1,0 +1,17 @@
+.profilePicture img{
+    border-radius: 50%;
+    margin: 1rem;
+}
+
+.profileContainer {
+    display: flex;
+}
+
+.profileContent {
+    font-size: large;
+    margin: 2rem;
+}
+
+.profileContent p {
+    margin-bottom: 1rem;
+}

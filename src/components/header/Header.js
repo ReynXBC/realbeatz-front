@@ -16,6 +16,7 @@ export default function Header({theme, setTheme}) {
   function logout() {
     navigate("/login");
   }
+
   return (
     <header>
       <div id={'top'} className={theme.className}>
@@ -26,8 +27,8 @@ export default function Header({theme, setTheme}) {
 
         </div>
         <div id={'tright'}>
-          <button className={'btn'} onClick={toggleTheme}>{theme.name}</button>
           <button className={'btn'} onClick={logout}>Logout</button>
+          <button className={'btn'} onClick={toggleTheme}>{theme.name}</button>
         </div>
       </div>
     </header>

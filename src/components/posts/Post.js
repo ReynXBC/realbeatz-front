@@ -42,7 +42,7 @@ export default function Post({postDetails}) {
                             type="text" id="postCommentInput"
                             name="postCommentInput" onChange={handleCommentInputChange}
                             value={commentInput}/>
-                        <button className="btn">Post</button>
+                        <button className="btn">Comment</button>
                     </form>
                 </div>
             </div>
