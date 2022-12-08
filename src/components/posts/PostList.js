@@ -33,7 +33,7 @@ export default function PostList({postList}) {
                 {
                     postList.map(postDetails => {
                         return (
-                            <Post postDetails={postDetails}/>
+                            <Post key={postDetails.id} postDetails={postDetails}/>
                         )
                     })
                 }

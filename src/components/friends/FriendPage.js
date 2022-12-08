@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import FriendPageCard from "./FriendPageCard";
-import {TEST_API_URL} from "../../config/WebConfigs";
+import {TEST_API_URL} from "../../config/api-config";
 
 export default function FriendPage() {
 
