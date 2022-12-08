@@ -1,8 +1,16 @@
 import React from "react";
+import {addNewFriend} from "../../services/user-service";
 
 export default function FriendPageCard({friend}) {
-  function addFriend(id) {
+  function handleAddFriend() {
     //send to server with magic
+    addNewFriend(friend.id)
+      .then((response) => {
+        console.log(
+          "Successfully sent friend request to " +
+          "user with id: " + friend.id);
+      })
+      .catch(error => console.log(error));
   }
 
   return (
@@ -14,7 +22,7 @@ export default function FriendPageCard({friend}) {
       <div className="friendPageCardDetailsDiv">
         <p>{friend.username}</p>
         <p>{friend.firstName} {friend.lastName}</p>
-        <button className={'btn'} onClick={addFriend(friend.id)}>Add Friend</button>
+        <button className={'btn'} onClick={handleAddFriend}>Add Friend</button>
       </div>
     </div>
   );
