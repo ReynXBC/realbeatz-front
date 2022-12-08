@@ -1,5 +1,6 @@
 import React from "react";
 import {addNewFriend} from "../../services/user-service";
+import {GET_PROFILE_PIC_URL} from "../../services/user-service";
 
 export default function FriendPageCard({friend}) {
   function handleAddFriend() {
@@ -17,7 +18,7 @@ export default function FriendPageCard({friend}) {
     <div key={friend.username} className={'friendPageCard'}>
       <div className="friendPageCardImageDiv">
         <img
-          src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2vVVG2BOns1aicnn0wKmKn3aYtHCcBiysWlpz_c&s"}/>
+          src={GET_PROFILE_PIC_URL+"/"+friend.profile.profilePictureFullName}/>
       </div>
       <div className="friendPageCardDetailsDiv">
         <p>{friend.username}</p>

@@ -22,7 +22,7 @@ export default function FriendPage({users}) {
   console.log(users);
 
   return (
-    <div id={'friendPageDiv'}>
+    <div className={'friendPageDiv'}>
       {
         users.map(user => {
           console.log(user);
