@@ -24,7 +24,7 @@ function FriendList() {
             {
                 friendsList.map(friend => {
                     return (
-                        <FriendCard friend={friend} />
+                        <FriendCard friend={friend}/>
                     )
                 })
             }</div>

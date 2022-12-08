@@ -7,36 +7,36 @@ import {fetchUserDetails} from "../services/user-service";
 import {storeUser} from "../utils/user-utils";
 
 const Dashboard = ({isAuthenticated, theme, username}) => {
-  useAuthenticationCheck(isAuthenticated);
+    useAuthenticationCheck(isAuthenticated);
 
-  useEffect(() => {
-    fetchUserDetails(username)
-      .then(user => {
-        console.log("Successfully fetched user")
-        console.log(user)
-        storeUser(user);
-      })
-      .catch(error => console.log(error));
-  }, [])
+    useEffect(() => {
+        fetchUserDetails(username)
+            .then(user => {
+                console.log("Successfully fetched user")
+                console.log(user)
+                storeUser(user);
+            })
+            .catch(error => console.log(error));
+    }, [])
 
-  function fetchPosts() {
-    // fetch()
-  }
+    function fetchPosts() {
+        // fetch()
+    }
 
-  return (
-    <div id={"container"}>
-      <div id={'out'} className={theme.className}>
-        <div id={'left'}>
-          <SideNavbar/>
+    return (
+        <div id={"container"}>
+            <div id={'out'} className={theme.className}>
+                <div id={'left'}>
+                    <SideNavbar/>
+                </div>
+                <div id={'mid'}>
+                    <Outlet/>
+                </div>
+                <div id={'right'}>
+                    <FriendList/>
+                </div>
+            </div>
         </div>
-        <div id={'mid'}>
-          <Outlet/>
-        </div>
-        <div id={'right'}>
-          <FriendList/>
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
 export default Dashboard;

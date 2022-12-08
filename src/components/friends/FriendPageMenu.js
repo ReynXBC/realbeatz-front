@@ -25,7 +25,7 @@ function FriendPageMenu() {
                 friendsList.map(friend => {
                     console.log(friend);
                     return (
-                        <FriendPageCard friend={friend} />
+                        <FriendPageCard friend={friend}/>
                     )
                 })
             }</div>
