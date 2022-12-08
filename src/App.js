@@ -17,6 +17,7 @@ import FriendPage from "./components/friends/FriendPage";
 import Profile from "./components/profile/Profile";
 import Settings from "./components/settings/Settings";
 import SignupForm from "./components/login/SignupForm";
+import NotificationPage from "./notifications/NotifcationPage";
 
 function App() {
   const [theme, setTheme] = useState({className: 'dark-theme', name: 'Dark'})
@@ -68,15 +69,16 @@ function App() {
         <Header theme={theme} setTheme={setTheme}/>
       </div>
       <Routes>
-        <Route index element={<Dashboard isAuthenticated={isAuthenticated} theme={theme} username={username} />}/>
+        <Route index element={<Dashboard isAuthenticated={isAuthenticated} theme={theme} username={username}/>}/>
         <Route path="/" element={<Dashboard isAuthenticated={isAuthenticated} theme={theme} username={username}/>}>
           <Route path="posts" element={<PostList postList={postList}/>}/>
-          <Route path="friends" element={<FriendPage  />}/>
-          <Route path="profile" element={<Profile  />}/>
+          <Route path="friends" element={<FriendPage/>}/>
+          <Route path="notifications" element={<NotificationPage/>}/>
+          <Route path="profile" element={<Profile/>}/>
           <Route path="settings" element={<Settings theme={theme} setTheme={setTheme}/>}/>
         </Route>
         <Route path="login" element={<LoginForm auth={auth}/>}/>
-        <Route path="signup" element={<SignupForm />}/>
+        <Route path="signup" element={<SignupForm/>}/>
         <Route path="test" element={<TestPage/>}/>
       </Routes>
     </>

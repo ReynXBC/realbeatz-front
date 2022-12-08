@@ -37,5 +37,4 @@ async function fetchAllFriends() {
 }
 
 
-
-export {fetchUserDetails,fetchAllFriends, GET_PROFILE_PIC_URL};
+export {fetchUserDetails, fetchAllFriends, GET_PROFILE_PIC_URL};

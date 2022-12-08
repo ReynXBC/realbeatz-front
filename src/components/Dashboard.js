@@ -8,48 +8,48 @@ import {storeUser} from "../utils/user-utils";
 
 const Dashboard = ({isAuthenticated, theme, username}) => {
 
-    const [friends, setFriends] = useState([]);
+  const [friends, setFriends] = useState([]);
 
 
-    useAuthenticationCheck(isAuthenticated);
+  useAuthenticationCheck(isAuthenticated);
 
-    useEffect(() => {
-        fetchUserDetails(username)
-            .then(user => {
-                console.log("Successfully fetched user")
-                console.log(user)
-                storeUser(user);
-            })
-            .catch(error => console.log(error));
-        getAllFriends();
-    }, [])
-
-    function fetchPosts() {
-        // fetch()
-    }
-
-    function getAllFriends() {
-      fetchAllFriends().then(list => {
-        console.log("List of friends:")
-        console.log(list);
-        setFriends(list);
+  useEffect(() => {
+    fetchUserDetails(username)
+      .then(user => {
+        console.log("Successfully fetched user")
+        console.log(user)
+        storeUser(user);
       })
-    }
+      .catch(error => console.log(error));
+    getAllFriends();
+  }, [])
 
-    return (
-        <div id={"container"}>
-            <div id={'out'} className={theme.className}>
-                <div id={'left'}>
-                    <SideNavbar/>
-                </div>
-                <div id={'mid'}>
-                    <Outlet/>
-                </div>
-                <div id={'right'}>
-                    <FriendList friends={friends}/>
-                </div>
-            </div>
+  function fetchPosts() {
+    // fetch()
+  }
+
+  function getAllFriends() {
+    fetchAllFriends().then(list => {
+      console.log("List of friends:")
+      console.log(list);
+      setFriends(list);
+    })
+  }
+
+  return (
+    <div id={"container"}>
+      <div id={'out'} className={theme.className}>
+        <div id={'left'}>
+          <SideNavbar/>
         </div>
-    );
+        <div id={'mid'}>
+          <Outlet/>
+        </div>
+        <div id={'right'}>
+          <FriendList friends={friends}/>
+        </div>
+      </div>
+    </div>
+  );
 }
 export default Dashboard;
