@@ -45,4 +45,8 @@ async function fetchAllUsers() {
 }
 
 
+<<<<<<< HEAD
 export {fetchUserDetails, fetchAllFriends, fetchAllUsers, GET_PROFILE_PIC_URL};
+=======
+export {fetchUserDetails, fetchAllFriends, GET_PROFILE_PIC_URL};
+>>>>>>> 33857aca1e96148c54347ae73e61740a5a6b9b68

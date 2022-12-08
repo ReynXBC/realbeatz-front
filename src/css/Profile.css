@@ -1,10 +1,19 @@
 .profilePicture img {
+<<<<<<< HEAD
   border-radius: 50%;
   margin: 1rem;
   width: 200px;
   height: 200px;
   border: solid thick;
   border-color: var(--buttonback)
+=======
+    border-radius: 50%;
+    margin: 1rem;
+    width: 200px;
+    height: 200px;
+    border: solid thick;
+    border-color: var(--buttonback)
+>>>>>>> 33857aca1e96148c54347ae73e61740a5a6b9b68
 }
 
 .profilePicture {
